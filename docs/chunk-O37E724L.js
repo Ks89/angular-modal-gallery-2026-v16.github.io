@@ -1,0 +1,20 @@
+import{a as b}from"./chunk-WVUO35GG.js";import{a as S,b as f,c as I,d as v}from"./chunk-ZED5APBM.js";import"./chunk-R2PTQT2U.js";import{b as u,m as h}from"./chunk-CWX23SAZ.js";import"./chunk-FXPWCWKA.js";import{a as y}from"./chunk-7KJL6RHT.js";import{a as p}from"./chunk-NO4W32D5.js";import"./chunk-VSHMVBPY.js";import{Db as s,La as o,Rb as e,S as l,Za as g,rb as d,sb as t,tb as i,ub as a}from"./chunk-VDWMVV4I.js";var x=class c{constructor(){this.uiService=l(y);this.titleService=l(p);this.modalGalleryService=l(h);this.images=[...b];this.configHtml=f;this.configTs=S;this.titleService.titleEvent.emit("Examples - Add image array"),this.codeHtml=`<button (click)="openModal(301, 0)">Click to open modal gallery id=1 at index=0</button>
+<button (click)="addRandomImage()">Add random image</button>
+  `,this.codeTypescript=`  images: Image[]; // init this array with your images
+
+  constructor(private modalGalleryService: ModalGalleryService) {}
+
+  addRandomImage() {
+    const imageToCopy: Image = this.images[Math.floor(Math.random() * this.images.length)];
+    const newImage: Image = new Image(this.images.length - 1 + 1, imageToCopy.modal, imageToCopy.plain);
+    this.images = [...this.images, newImage]; // this is really important (you MUST create a new copy of the input array)
+  }
+
+  openModal(id: number, imageIndex: number): void {
+    const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
+      id,
+      images: this.images,
+      currentImage: this.images[imageIndex]
+    } as ModalGalleryConfig) as ModalGalleryRef;
+  }
+  `}ngOnInit(){this.metaData()}addRandomImage(){let m=this.images[Math.floor(Math.random()*this.images.length)],n=new u(this.images.length-1+1,m.modal,m.plain);this.images=[...this.images,n]}openModal(m,n){let r=this.modalGalleryService.open({id:m,images:this.images,currentImage:this.images[n]})}metaData(){this.uiService.setMetaData({title:"Demo add image"})}static{this.\u0275fac=function(n){return new(n||c)}}static{this.\u0275cmp=g({type:c,selectors:[["app-add-image-array-page"]],decls:88,vars:4,consts:[[1,"container"],[1,"link","clickable"],["href","https://github.com/Ks89/angular-modal-gallery",1,"link-title"],[1,"text-success"],[1,"btn","btn-danger","btn-sm",3,"click"],["aria-hidden","true",1,"fa","fa-plus"],[1,"btn","btn-primary","btn-sm",3,"click"],[3,"content","language"],[1,"table","table-hover","table-sm"]],template:function(n,r){n&1&&(t(0,"div",0)(1,"h2",1)(2,"a",2),e(3,"Add image to array"),i()(),t(4,"p"),e(5,"Modal gallery example with a "),t(6,"b",3),e(7,"button to add new images."),i()(),a(8,"br"),t(9,"h3"),e(10,"Live Demo "),t(11,"button",4),s("click",function(){return r.addRandomImage()}),a(12,"i",5),e(13,"\xA0\xA0Add image "),i()(),a(14,"br"),t(15,"button",6),s("click",function(){return r.openModal(301,0)}),e(16,"Click to open modal gallery id=1 at index=0"),i(),a(17,"br")(18,"br"),t(19,"section")(20,"h3"),e(21,"Code"),i(),a(22,"br"),t(23,"h4"),e(24,"Template"),i(),a(25,"ks-codemirror",7)(26,"br"),t(27,"h4"),e(28,"Typescript"),i(),a(29,"ks-codemirror",7),i(),a(30,"br")(31,"br"),t(32,"section")(33,"h3"),e(34,"Service inputs"),i(),a(35,"br"),t(36,"table",8)(37,"thead")(38,"tr")(39,"th"),e(40,"Input"),i(),t(41,"th"),e(42,"Value"),i()()(),t(43,"tbody")(44,"tr")(45,"td")(46,"code"),e(47,"id"),i()(),t(48,"td")(49,"div")(50,"i"),e(51,"Value: "),i(),t(52,"code"),e(53,"NUMERIC UNIQUE ID"),i()(),t(54,"div")(55,"b",3),e(56,"Unique id"),i()()()(),t(57,"tr")(58,"td")(59,"code"),e(60,"images"),i()(),t(61,"td")(62,"div")(63,"i"),e(64,"Value: "),i(),t(65,"code"),e(66,"Image[]"),i()(),t(67,"div")(68,"b",3),e(69,"Array of "),t(70,"code"),e(71,"Image"),i(),e(72," objects"),i()()()(),t(73,"tr")(74,"td")(75,"code"),e(76,"currentImage"),i()(),t(77,"td")(78,"div")(79,"i"),e(80,"Value: "),i(),t(81,"code"),e(82,"Image"),i()(),t(83,"div")(84,"b",3)(85,"code"),e(86,"Image"),i(),e(87," object to show"),i()()()()()()()()),n&2&&(o(25),d("content",r.codeHtml)("language","html"),o(4),d("content",r.codeTypescript)("language","typescript"))},dependencies:[v,I],encapsulation:2})}};export{x as AddImageArrayComponent};
