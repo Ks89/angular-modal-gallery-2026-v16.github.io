@@ -1,1 +1,0 @@
-import{Cb as o,Db as a,Yb as p,Za as n}from"./chunk-RXF25YXR.js";var e=class e{};e.\u0275fac=function(t){return new(t||e)},e.\u0275cmp=n({type:e,selectors:[["app-not-found-page"]],decls:2,vars:0,template:function(t,m){t&1&&(o(0,"h3"),p(1,"Error 404: Page not found"),a())},encapsulation:2});var i=e;export{i as NotFoundComponent};

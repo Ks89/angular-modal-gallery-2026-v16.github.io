@@ -19,10 +19,9 @@
         <br>
         <h4>Step 2 - upgrade Angular and rxjs</h4>
         <p>Use the latest version of Angular (with the recommended rxjs version). It must be Angular 20 or higher.</p>
-        <br>
-        <h4>Step 3 (optional) - migrate your project from modules to standalone components</h4>
-        <p>Follow the official Angular documentation.</p>
       </section>
+      <br>
+      <br>
       <section>
         <h3>from 13.x.x to 14.x.x</h3>
         <br>
@@ -128,7 +127,7 @@
         <h4>Step 5 - update carousel</h4>
         <ul>
           <li>IE11 legacy mode has been removed from the library, because Angular doesn't support Internet Explorer 11 anymore.
-            So you have to remove <code>legacyIE11Mode: true</code> in your code
+            So remove <code>legacyIE11Mode: true</code> in your code
           </li>
           <li>remove <code>[previewConfig]</code> and <code>[carouselConfig]</code> inputs from HTML, because replaced with a single <code>[config]="..."</code> like all other components of the library.
             For more information check the <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">official example</a> and the

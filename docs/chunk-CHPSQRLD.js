@@ -1,1 +1,0 @@
-import{S as n,eb as r}from"./chunk-RXF25YXR.js";var t=class t{constructor(){this.titleEvent=new r}};t.\u0275fac=function(e){return new(e||t)},t.\u0275prov=n({token:t,factory:t.\u0275fac,providedIn:"root"});var o=t;export{o as a};

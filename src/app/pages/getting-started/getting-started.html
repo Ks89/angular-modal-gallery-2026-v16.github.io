@@ -10,8 +10,9 @@
 
       <section class="container">
         <h2>Dependencies</h2>
-        <p>Based on the table below, choose the right version of &#64;ks89/angular-modal-gallery.</p>
-        <p>However, only the latest stable release of &#64;ks89/angular-modal-gallery is supported. For this reason, I really suggest to always stay up-to-date with all your dependencies.</p>
+        <p>Select the appropriate version of &#64;ks89/angular-modal-gallery from the table below.</p>
+        <p>Only the latest stable release is supported.</p>
+        <p>To ensure compatibility and receive the latest fixes and improvements, always keep this library and its dependencies up to date.</p>
 
         <p>The supported versions are:</p>
         <div class="table-responsive">
@@ -139,8 +140,8 @@
             </tr>
             <tr>
               <td><b>15.0.0 (recommended)</b></td>
-              <td>20.0.0</td>
-              <td>20.0.0</td>
+              <td>21.0.0</td>
+              <td>21.0.0</td>
               <td>No</td>
               <td>No</td>
               <td>optional</td>
@@ -183,12 +184,12 @@
 
       <section class="container">
         <h2>Update your project</h2>
-        <p>Once finished to install dependencies, you need to follow some simple steps.</p>
-        <p>I consider only angular-cli projects. If you want to use <code>&#64;angular/universal</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
+        <p>After installing the dependencies, follow the steps below.</p>
+        <p>These instructions apply to Angular CLI projects only. If you are using <code>&#64;angular/universal</code>, please refer to the <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
         <br>
         <h3>Step 1: Import dependencies</h3>
-        <p>If you are working on a modern project with <b>standalone components</b> you can import <code>GalleryModule</code> with <code>importProvidersFrom</code></p>
-        <p>Pass <code>appConfig</code> to <code>bootstrapApplication</code></p>
+        <h4>Standalone components</h4>
+        <p>If your project uses standalone components, import <code>GalleryModule</code> using <code>importProvidersFrom</code> and pass <code>appConfig</code> to <code>bootstrapApplication</code></p>
         <pre>
         bootstrapApplication(AppComponent, appConfig)
           .catch((err) => console.error(err));
@@ -209,10 +210,9 @@
           ]
         &#125;;
         </pre>
-
-
-        <p>Otherwise, if you are still working on a <b>module based project</b>, you have to list <code>GalleryModule</code> in your root module and any additional
-          application modules that make use of the components of this library.</p>
+        <br>
+        <h4>NgModule-based projects</h4>
+        <p>If your project still uses NgModules, import <code>GalleryModule</code> in your root module and any module that uses this library:</p>
         <pre>
         import &#123;GalleryModule&#125; from '&#64;ks89/angular-modal-gallery';
         &#64;NgModule(&#123;
@@ -228,7 +228,7 @@
 
 
         <h3>Step 2: Update global CSS</h3>
-        <p>Update your global styles (CSS/SCSS/LESS) file adding this:</p>
+        <p>Add the following styles to your global (CSS/SCSS/LESS) file:</p>
         <pre>
         &#64;use "~&#64;angular/cdk/overlay-prebuilt.css" as *;
         .ks-modal-gallery-backdrop &#123;
@@ -240,12 +240,12 @@
         &#125;
         </pre>
 
-        <p>Please not that <b>&#64;import has been deprecated</b>, so you have to use the new syntax <b>&#64;use ... as *</b>. For more info check
-          <a href="https://sass-lang.com/documentation/breaking-changes/import/">the official page here</a></p>
+        <p>Note that <b>&#64;import</b> is deprecated. Always use <b>&#64;use ... as *</b>. For more details, refer to
+          <a href="https://sass-lang.com/documentation/breaking-changes/import/">the official documentation</a></p>
         <br>
 
         <h3>Step 3: (optional) update tsconfig file</h3>
-        <p>Add &#64;types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.json</code>) as follow:</p>
+        <p>If needed, add &#64;types to tsconfig.json:</p>
         <pre>
         &#123;
           ...
@@ -261,7 +261,7 @@
       <section id="examples" class="container">
         <h2>Official examples</h2>
         <ul>
-          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-20">angular-cli 20 (recommended)</a></li>
+          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-21">angular-cli 21 (recommended)</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
         </ul>
@@ -270,16 +270,15 @@
 
       <section class="container">
         <h2>Support requests</h2>
-        <p>If you need support, <a href="https://github.com/Ks89/angular-modal-gallery/issues">open an issue</a> filling the template with all information.</p>
+        <p>For support requests, please <a href="https://github.com/Ks89/angular-modal-gallery/issues">open an issue</a> and fill in the provided template with all the required information.</p>
       </section>
       <br>
 
       <section class="container">
         <h2>Contributing</h2>
-        <p>This project is becoming bigger year after year. Also, It requires many time staying up-to-date and supporting the latest Angular version.</p>
-        <p>For these reasons I'm searching for <a href="https://github.com/Ks89/angular-modal-gallery/blob/master/CONTRIBUTING.md">contributions</a>.
-          Also, <a href="https://github.com/sponsors/Ks89">donations via Github Sponsors</a> are
-          very appreciated.</p>
+        <p>This project continues to grow and requires constant maintenance to stay aligned with the latest Angular releases.</p>
+        <p><a href="https://github.com/Ks89/angular-modal-gallery/blob/master/CONTRIBUTING.md">Contributions</a> are very welcome. If you would like to support the project financially, donations via <a
+          href="https://github.com/sponsors/Ks89">Github Sponsors</a> are greatly appreciated.</p>
       </section>
       <br>
     </div>

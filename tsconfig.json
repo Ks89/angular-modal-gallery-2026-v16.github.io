@@ -15,10 +15,6 @@
     "target": "ES2022",
     "module": "preserve",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
     "typeRoots": [
       "node_modules/@types"
     ]

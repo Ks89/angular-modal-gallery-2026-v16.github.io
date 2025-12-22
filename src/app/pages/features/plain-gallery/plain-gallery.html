@@ -23,7 +23,7 @@
   <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
-  <p>Then, in your Typescript component you have to init the images array with Image class instances and write the method to open modal gallery.</p>
+  <p>Then, in your Typescript component init the images array with Image class instances and write the method to open modal gallery.</p>
 
   <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
@@ -61,7 +61,7 @@
             For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.
           </div>
           <div>
-            <b class="text-success">Attention: if you need to add the same image (same url) multiple times in the same plain gallery, you must append to the url a random but unique query param to prevent caching issues.
+            <b class="text-success">Warning: if you need to add the same image (same url) multiple times in the same plain gallery, you must append to the url a random but unique query param to prevent caching issues.
               For more info, please read <a href="https://github.com/Ks89/angular-modal-gallery/issues/171">this issue</a>.</b>
           </div>
         </td>

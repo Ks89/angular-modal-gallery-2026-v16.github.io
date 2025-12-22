@@ -16,19 +16,19 @@
   <h2>API</h2>
 
   <p>Follow the getting started guide to install &#64;ks89/angular-modal-gallery and all requirements.</p>
-  <p>To use Modal Gallery in your application, you have to invoke the <code>.open(...)</code> method of <code>ModalGalleryService</code>.
+  <p>To use Modal Gallery in your application, invoke the <code>.open(...)</code> method of <code>ModalGalleryService</code>.
     You are free to invoke this method wherever you want, for instance pressing a button.</p>
   <p>Previous versions of &#64;ks89/angular-modal-gallery were very limited forcing you to add a selector into the HTML file, however,
     now you can show Modal Gallery without adding UI element to you app, or even automatically after an event,
     invoking the open method.</p>
   <p>To keep everything simple, let say that we want to open Modal Gallery with a button and specifically we want to open the first image (index = 0) of an array of images,
     exactly as the live demo above.
-    So in the component HTML file you have to add this:</p>
+    So in the component HTML file add this:</p>
 
   <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
-  <p>Then, in your Typescript component you have to init the images array with Image class instances and invoke the open method to show the modal gallery in this way:</p>
+  <p>Then, in your Typescript component init the images array with Image class instances and invoke the open method to show the modal gallery in this way:</p>
 
   <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
@@ -66,7 +66,7 @@
             For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.
           </div>
           <div>
-            <b class="text-success">Attention: if you need to add the same image (same url) multiple times in the same modal gallery, you must append to the url a random but unique query param to prevent caching issues.
+            <b class="text-success">Warning: if you need to add the same image (same url) multiple times in the same modal gallery, you must append to the url a random but unique query param to prevent caching issues.
               For more info, please read <a href="https://github.com/Ks89/angular-modal-gallery/issues/171">this issue</a>.</b>
           </div>
         </td>
@@ -226,7 +226,7 @@
         </div>
         <div>
           <p>Mandatory source path of the modal image. To support base64 images, check the official example.</p>
-          <p>If you need multiple non-base64 images with the same image path, to prevent caching issues you have to append something like '?index', for instance '?0', '?1'.
+          <p>If you need multiple non-base64 images with the same image path, to prevent caching issues append something like '?index', for instance '?0', '?1'.
             For more information, please check the official example called 'Same images'.</p>
         </div>
       </td>
@@ -239,7 +239,7 @@
         </div>
         <div>
           <p>Optional description text.
-            Attention: this is not the full description, but only the last part, after image numbers.
+            Warning: this is not the full description, but only the last part, after image numbers.
             For instance: `Image 2/12 - <code>description</code>`. To ignore this feature, don't add this property.</p>
         </div>
       </td>
@@ -443,7 +443,7 @@
             As you can see, "red" parts are customizable using the three properties described above. Furthermore, `<i>2</i>` is the index of the visible image, `<i>12</i>` the total number of images and `<i>bla bla</i>`
             the description passed thanks to the input <code><a [routerLink]="['/features/common']">Image</a></code> object.
           </p>
-          <p>Attention please! There aren't spaces between values. So if you want a 'text - text' you have to specify exactly ' - ', with the two spaces</p>
+          <p>Warning please! There aren't spaces between values. So if you want a 'text - text' specify exactly ' - ', with the two spaces</p>
           <p>Also, from version 5.4.0, you can use this interface to change description's style.</p>
         </div>
       </td>
