@@ -11,9 +11,10 @@ This is the official documentation website for the `@ks89/angular-modal-gallery`
 ```bash
 # Development
 npm start                  # Serve locally (dev mode)
+npm run serve:prod         # Serve with production config
 npm run build:dev          # Development build
 npm run build:prod         # Production build
-npm run build:release      # GitHub Pages release build (sets base href), but then you need to manually copy the `dist/` folder content into `docs/` folder
+npm run build:release      # GitHub Pages release build (base href: /angular-modal-gallery-2026-v16.github.io/), then manually copy dist/ into docs/
 
 # Testing
 ng test                    # Run tests with Karma/Jasmine
