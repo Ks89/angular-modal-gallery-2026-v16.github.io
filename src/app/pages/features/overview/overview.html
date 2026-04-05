@@ -1,7 +1,7 @@
 <div class="container d-flex flex-column">
 
   <h2>Overview</h2>
-  <p>Despite its name, &#64;ks89/angular-modal-gallery is more than for modal galleries, because I'm introducing new features every major release. In fact, It's composed by 3 main parts:</p>
+  <p>Despite its name, &#64;ks89/angular-modal-gallery is more than a modal gallery — new features are introduced with every major release. It consists of three main components:</p>
   <ul>
     <li><strong>MODAL GALLERY</strong>: available injecting the <code>ModalGalleryService</code> in your component</li>
     <li><strong>PLAIN GALLERY</strong>: available via <code>&lt;ks-plain-gallery&gt;&lt;/ks-plain-gallery&gt;</code></li>
@@ -10,7 +10,7 @@
   <br>
 
   <h4>MODAL GALLERY</h4>
-  <p>It's the core part of this project and display a modal window with full screen images, buttons, the current image and optionally, also navigation dots and previews</p>
+  <p>The core component of this library. It displays a modal window with full-screen images, action buttons, the current image, and optionally navigation dots and previews.</p>
   <div class="d-flex flex-row justify-content-center">
     <img [src]="modalGalleryPath">
   </div>
@@ -28,8 +28,7 @@
   <br>
 
   <h4>PLAIN GALLERY</h4>
-  <p>It contains a list of clickable thumbnails to open modal gallery. Layouts are configurable and users could also use
-    a custom implementation to draw everything they want.</p>
+  <p>Displays a list of clickable thumbnails that open the modal gallery. Layouts are highly configurable, and a fully custom implementation can be provided for advanced rendering requirements.</p>
   <div class="d-flex flex-row justify-content-center">
     <img [src]="plainGalleryPath">
   </div>
@@ -38,8 +37,7 @@
   <br>
 
   <h4>CAROUSEL</h4>
-  <p>It contains a list of scrollable images (full width or fixed width) also with previews. By default images scroll automatically.
-    Users can configure this component with many parameters, also they can project HTML content into the current carousel image.</p>
+  <p>Displays a list of scrollable images (full or fixed width) with optional previews. Images advance automatically by default. The component supports extensive configuration and allows HTML content projection into the current carousel image.</p>
   <div class="d-flex flex-row justify-content-center">
     <img [src]="carouselPath">
   </div>

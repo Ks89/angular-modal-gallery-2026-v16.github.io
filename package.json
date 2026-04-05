@@ -1,13 +1,13 @@
 {
   "name": "angular-modal-gallery-official-website",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "author": "Stefano Cappa",
   "description": "Doc website for @ks89/angular-modal-gallery",
   "license": "MIT",
   "main": "src/main.ts",
   "homepage": "https://github.com/Ks89",
   "private": true,
-  "repository": "https://github.com/Ks89/angular-modal-gallery-2025-v15.github.io",
+  "repository": "https://github.com/Ks89/angular-modal-gallery-2026-v16.github.io",
   "engines": {
     "node": ">=22.0.0",
     "npm": ">=10.2.4"
@@ -23,7 +23,7 @@
     "build:dev:stats": "npm run build:dev -- --stats-json",
     "build:prod": "ng build --configuration=production --delete-output-path",
     "build:prod:stats": "npm run build:prod -- --stats-json",
-    "build:release": "ng build --configuration=release --base-href /angular-modal-gallery-2025-v15.github.io/ --deploy-url /angular-modal-gallery-2025-v15.github.io/",
+    "build:release": "ng build --configuration=release --base-href /angular-modal-gallery-2026-v16.github.io/ --deploy-url /angular-modal-gallery-2026-v16.github.io/",
     "clean": "npm cache verify && npm run clean:dist",
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage",
@@ -47,7 +47,7 @@
     "@ddietr/codemirror-themes": "^1.5.2",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
-    "@ks89/angular-modal-gallery": "^15.0.0",
+    "@ks89/angular-modal-gallery": "^15.0.1",
     "@ks89/ngx-codemirror6": "^3.0.0",
     "bootstrap": "^5.3.8",
     "codemirror": "^6.0.2",

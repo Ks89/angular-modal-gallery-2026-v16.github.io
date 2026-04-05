@@ -4,7 +4,7 @@
   <h1 id="DescriptionInterfaces" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Description interfaces</a>
   </h1>
-  <p>Description interfaces used by all components of this library.
+  <p>Description interfaces shared across all components of this library.
 
     <br>
 
@@ -33,9 +33,9 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>It's the beginning part of the description. By default its value is the string 'Image',
-            but you can change the language specifying your value, for instance 'Immagine' (italian),
-            'Bild' (german), 'Imagen' (spanish) or also an empty string ''.</p>
+          <p>The prefix of the description text. Defaults to <code>'Image'</code>.
+            It can be localized by specifying a custom value, such as <code>'Immagine'</code> (Italian),
+            <code>'Bild'</code> (German), <code>'Imagen'</code> (Spanish), or an empty string <code>''</code>.</p>
           <p>Example: `<code>imageText</code> 2/12 - bla bla`</p>
         </div>
       </td>
@@ -71,10 +71,10 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>It's the full text description. If you set this value, all others will be ignored.</p>
-          <p>Obviously, if you want a dynamic description with the current image number and so on,
-            build it by yourself. Otherwise, you should use the other parameters of this object
-            to customize the default description. </p>
+          <p>The complete description string. When set, all other description properties are ignored.</p>
+          <p>For a dynamic description that incorporates the current image index or total count,
+            construct it manually. Otherwise, use the other properties of this interface
+            to customize the default description.</p>
         </div>
       </td>
     </tr>
@@ -253,11 +253,11 @@
   <h2 id="DescriptionStrategy" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">DescriptionStrategy</a>
   </h2>
-  <p>Enum to decide when description should be visible or hidden. It can be one of these enum values:</p>
+  <p>Enum controlling the visibility of the description. Possible values:</p>
   <br>
   <ul>
     <li><code>ALWAYS_HIDDEN</code>: description is always hidden</li>
     <li><code>ALWAYS_VISIBLE</code>: description is always visible</li>
-    <li><code>HIDE_IF_EMPTY</code>: description is visible if valid</li>
+    <li><code>HIDE_IF_EMPTY</code>: description is visible only when a non-empty value is provided</li>
   </ul>
 </div>

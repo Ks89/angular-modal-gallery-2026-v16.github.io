@@ -3,12 +3,11 @@
   <h1 id="Carousel" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Carousel</a>
   </h1>
-  <p>Carousel component is a component to build responsive carousels. It contains a collection of <code><a [routerLink]="['/features/common']">Images</a></code>,
-    like all other components exposed by this library and many other config objects.
-    It displays images as a carousel, so a big image (either full or limited width) with right and left arrows and it shows images every a fixed amount of time.
-    Optionally, it can display previews above/below the main image. Obviously, there are additional configurable features, like aria, keyboard navigation, sizes and so on.
-    A very cool feature, it the integration with modal-gallery. In fact, you can configure the carousel to open the current image in a modal way,
-    using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryComponent</a></code>.</p>
+  <p>The carousel component builds responsive, auto-advancing image galleries. Like other library components, it accepts a collection of <code><a [routerLink]="['/features/common']">Images</a></code>
+    and various configuration objects.
+    It renders a large image (full or constrained width) with left and right navigation arrows, cycling through images at a configurable interval.
+    Previews can optionally be displayed above or below the main image. Additional configurable features include ARIA support, keyboard navigation, and custom sizes.
+    A notable feature is the integration with the modal gallery: the carousel can be configured to open the current image using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryService</a></code>.</p>
   <br>
 
   <h2>Live demo</h2>
@@ -18,20 +17,20 @@
 
   <h2>API</h2>
 
-  <p>To add carousel in your application, you must add <code>&lt;ks-carousel&gt;&lt;/ks-carousel&gt;</code> in your component template file
-    and pass the two mandatory inputs id and images.</p>
+  <p>To add the carousel to your application, include <code>&lt;ks-carousel&gt;&lt;/ks-carousel&gt;</code> in your component template
+    and provide the two mandatory inputs <code>id</code> and <code>images</code>.</p>
   <p>The minimal carousel in your HTML file is:</p>
 
   <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
-  <p>Then, in your Typescript component init the images array with Image class instances. For instance</p>
+  <p>In your TypeScript component, initialize the images array with <code>Image</code> instances. For example:</p>
 
   <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
 
-  <p>To customize the carousel exploring all possibilities, see the table below to pass your configuration. To listen for carousel events, check the Output table.</p>
-  <p>To try more carousel live demos with custom configuration, please take a look at the <a routerLink="/demo">example section</a> of this website.</p>
+  <p>To explore all customization options for the carousel, refer to the configuration table below. To handle carousel events, see the Outputs table.</p>
+  <p>For additional live demos with custom configurations, refer to the <a routerLink="/demo">examples section</a> of this website.</p>
   <br>
 
   <section>
@@ -46,7 +45,7 @@
           </div>
           <div>
             A mandatory unique id >= 0 of the current carousel.
-            Despite CarouselComponent doesn't use this value, it must be unique because a carousel can open a modal image
+            Although CarouselComponent does not use this value, it must be unique because a carousel can open a modal image
             using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryService</a></code>.
           </div>
         </td>
@@ -61,9 +60,9 @@
             <p> The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent both the thumb gallery and the
               modal images. In fact, an <code><a [routerLink]="['/features/common']">Image</a></code> is an object with both thumb and
               image source paths with other additional configuration parameters. For more info check <code><a [routerLink]="['/features/common']">Image</a></code>.</p>
-            <p class="warning">Carousel uses the image path assigned to the modal property in Image class. This is for historical reason and to provide a better integration with modal-gallery.</p>
-            <p>Please, don't use <code>this.images.push(img)</code> when you want to modify this array, instead re-assign it to trigger change detection.
-              For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.</p>
+            <p class="warning">The carousel uses the image path assigned to the <code>modal</code> property of the <code>Image</code> class. This is by design, for historical reasons and to ensure better integration with the modal gallery.</p>
+            <p>Avoid using <code>this.images.push(img)</code> to modify this array. Instead, re-assign it to trigger change detection.
+              For example: <code>this.images = [...this.images, newImage]</code> creates a new array with the additional image appended.</p>
           </div>
         </td>
       </tr>
@@ -95,7 +94,7 @@
         <td>
           <p>An <code>ImageEvent</code> right <b>after</b> the current image is changed.</p>
           <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number).</p>
-          <p>Everytime the current image changes, a new <code>ImageEvent</code> will be emitted.</p>
+          <p>Every time the current image changes, a new <code>ImageEvent</code> will be emitted.</p>
           <ul>
             <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a
               [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
@@ -170,7 +169,7 @@
           <i>Type: </i><code>string</code>
         </div>
         <div>
-          <p>Maximum height of the carousel. It's used to set the CSS property maxHeight. '400px%' by default.</p>
+          <p>Maximum height of the carousel. It's used to set the CSS property maxHeight. '400px' by default.</p>
         </div>
       </td>
     </tr>
@@ -181,7 +180,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>boolean to disable both left and right arrows. true by default.</p>
+          <p>When <code>false</code>, both left and right navigation arrows are hidden. Defaults to <code>true</code>.</p>
         </div>
       </td>
     </tr>
@@ -192,9 +191,9 @@
           <i>Type: </i><code>string</code>
         </div>
         <div>
-          <p>CSS objectFit property. For more information check
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">Mozilla MDN web doc</a>.
-            'cover' by default.</p>
+          <p>Sets the CSS <code>object-fit</code> property. For more information, refer to the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">MDN documentation</a>.
+            Defaults to <code>'cover'</code>.</p>
         </div>
       </td>
     </tr>
@@ -205,7 +204,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>boolean to disable keyboard navigation. true by default.</p>
+          <p>When <code>false</code>, keyboard navigation is disabled. Defaults to <code>true</code>.</p>
         </div>
       </td>
     </tr>
@@ -216,7 +215,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>boolean to enable clicks on the current image to open modal gallery. false by default.</p>
+          <p>When <code>true</code>, clicking the current image opens the modal gallery. Defaults to <code>false</code>.</p>
         </div>
       </td>
     </tr>
@@ -227,7 +226,7 @@
   <h2 id="PlayConfig" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlayConfig</a>
   </h2>
-  <p>Interface to change the behaviour of auto-navigation, like autoPlay and interval in milliseconds.</p>
+  <p>Interface for configuring auto-navigation behavior, including the autoPlay setting and transition interval in milliseconds.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -238,7 +237,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>If false autoPlay is disabled. true by default.</p>
+          <p>When <code>false</code>, autoPlay is disabled. Defaults to <code>true</code>.</p>
         </div>
       </td>
     </tr>
@@ -249,8 +248,8 @@
           <i>Type: </i><code>number</code>
         </div>
         <div>
-          <p>Integer >= 0 that represents the amount of time in milliseconds between every image.
-            It's used only when autoPlay is enabled. 5000 by default.</p>
+          <p>A non-negative integer specifying the interval in milliseconds between image transitions.
+            Applicable only when autoPlay is enabled. Defaults to <code>5000</code>.</p>
         </div>
       </td>
     </tr>
@@ -261,7 +260,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>If false, carousel won't stop moving the mouse pointer over it. true by default.</p>
+          <p>If false, the carousel will not pause when the mouse pointer is moved over it. true by default.</p>
         </div>
       </td>
     </tr>
@@ -272,7 +271,7 @@
   <h2 id="CarouselImageConfig" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">CarouselImageConfig</a>
   </h2>
-  <p>Interface to change current image of the carousel, like description or to invert the swipe direction.</p>
+  <p>Interface for configuring the carousel's current image, including the description and swipe direction.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -338,8 +337,8 @@
           <i>Type: </i><code>number | boolean</code>
         </div>
         <div>
-          <p>The result/data of the emitted event. For example, it could be the index of the current image
-            or a boolean to say if images are ready to display and so on.</p>
+          <p>The result or data payload of the emitted event. For example, it may represent the index of the current image
+            or a boolean indicating whether images are ready to display.</p>
         </div>
       </td>
     </tr>

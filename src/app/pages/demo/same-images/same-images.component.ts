@@ -65,15 +65,15 @@ export class SameImagesComponent implements OnInit {
       `  images: Image[] = [
   new Image(0, {
     img: '/assets/images/gallery/img1.jpg?0',
-    extUrl: 'http://www.google.com'
+    extUrl: 'https://www.google.com'
   }),
   new Image(1, {
     img: '/assets/images/gallery/img1.jpg?1',
-    extUrl: 'http://www.google.com'
+    extUrl: 'https://www.google.com'
   }),
   new Image(2, {
     img: '/assets/images/gallery/img1.jpg?2',
-    extUrl: 'http://www.google.com'
+    extUrl: 'https://www.google.com'
   })];
 
   openModal(id: number, imageIndex: number): void {

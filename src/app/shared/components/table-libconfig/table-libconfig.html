@@ -13,7 +13,7 @@
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">CarouselLibConfig</a>
   </h2>
 }
-<p>The main objects to configure modal gallery, plain gallery and carousel.</p>
+<p>The primary configuration objects for the modal gallery, plain gallery, and carousel.</p>
 <br>
 <div class="table-responsive">
   <table class="table table-hover table-sm">
@@ -27,7 +27,7 @@
             </div>
             <div>
               <p>Optional object used to configure <code>PreviewConfig</code>.</p>
-              <p>Interface to configure previews, for instance to choose either the number, visibility, arrows, sizes.</p>
+              <p>Interface for configuring previews, including the number of visible previews, navigation arrows, and sizes.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -61,9 +61,9 @@
               <i>Type: </i><code>SlideConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional object used to configure <code>SlideConfig</code> to manage sliding features of modal-gallery and ....</p>
-              <p>Interface to enable infinite-sliding (you won't be able to navigate before both the first and after the last images) and to configure both side-previews and autoPlay.
-                By default, infinite sliding is disabled, side-previews are visible with <code>width: 100px</code> and <code>height: auto</code> and autoPlay is disabled.</p>
+              <p>Optional object used to configure <code>SlideConfig</code> to manage sliding features of modal-gallery.</p>
+              <p>Enables or disables infinite sliding and configures side-previews and autoPlay behavior. When disabled, navigation is restricted to within the first and last image boundaries.
+                By default, infinite sliding is disabled, side-previews are visible with <code>width: 100px</code> and <code>height: auto</code>, and autoPlay is disabled.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -81,8 +81,8 @@
             </div>
             <div>
               <p>Optional object used to configure <code><a [routerLink]="['/features/accessibility']">AccessibilityConfig</a></code>.</p>
-              <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. By default all texts are written in english.
-                This default config object is exported as KS_DEFAULT_ACCESSIBILITY_CONFIG.</p>
+              <p>Interface for customizing accessibility attributes such as alt text, titles, and aria-labels. All default values are in English.
+                The default configuration object is exported as <code>KS_DEFAULT_ACCESSIBILITY_CONFIG</code>.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -99,8 +99,7 @@
               <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional property to close modal-gallery clicking on the semi-transparent background.</p>
-              <p>If true, you can click on the semi-transparent background of modal images to close it. <code>true</code> by default.</p>
+              <p>When <code>true</code>, clicking the semi-transparent backdrop closes the modal gallery. Defaults to <code>true</code>.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -118,7 +117,7 @@
             </div>
             <div>
               <p>Optional object used to configure <code>KeyboardConfig</code>.</p>
-              <p>Interface to configure keyboard's buttons. All properties are optional and with default values. Check KeyboardConfig for more information.</p>
+              <p>Interface for configuring keyboard shortcuts. All properties are optional with predefined default values. See <code>KeyboardConfig</code> for more information.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -136,8 +135,7 @@
             </div>
             <div>
               <p>Optional object used to configure <code>CurrentImageConfig</code>.</p>
-              <p>Interface to configure current image in modal-gallery. For instance you can either disable navigation when you click on the current image (enabled by default),
-                or change descriptions, loading spinners or enable download features.</p>
+              <p>Interface for configuring the current image behavior in modal gallery, including click navigation, descriptions, loading spinners, and download features.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -157,7 +155,7 @@
             </div>
             <div>
               <p>Optional object used to configure <code>ButtonsConfig</code>.</p>
-              <p>Interface to choose which buttons to show and handle their behaviour.</p>
+              <p>Interface for selecting which buttons to display and defining their behavior.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -175,7 +173,7 @@
             </div>
             <div>
               <p>Optional object used to configure <code>PlainGalleryConfig</code>.</p>
-              <p>Interface to configure thumbnails, for instance to change the layout. Furthermore, it's useful to write full custom layouts (for more info see official demos).</p>
+              <p>Interface for configuring thumbnail layout, including support for fully custom layouts. Refer to the official demos for advanced usage examples.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -192,8 +190,8 @@
               <i>Type: </i><code>CarouselConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional object used to configure the carousel, like to change sizes, hide some features and so on.</p>
-              <p>For more information, please see the CarouselConfig's section</p>
+              <p>Optional configuration object for the carousel, including size adjustments and feature visibility toggles.</p>
+              <p>For more information, see the CarouselConfig section.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -211,8 +209,8 @@
               <i>Type: </i><code>CarouselImageConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional object to change current image of the carousel, like description or to invert the swipe direction.</p>
-              <p>For more information, please see the CarouselImageConfig's section</p>
+              <p>Optional configuration object for the carousel's current image, including description settings and swipe direction.</p>
+              <p>For more information, see the CarouselImageConfig section.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -230,8 +228,8 @@
               <i>Type: </i><code>CarouselPreviewConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional object used to configure previews, for instance to choose either the number, visibility, arrows, sizes.
-                If you want to know how to use this object, please check <a [routerLink]="['/features/previews']">PreviewsComponent</a>.</p>
+              <p>Optional configuration object for carousel previews, including the number of previews, visibility, navigation arrows, and sizes.
+                For usage details, refer to the <a [routerLink]="['/features/previews']">Previews documentation</a>.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -248,8 +246,8 @@
               <i>Type: </i><code>PlayConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Optional object used to change the behaviour of auto-navigation, like autoPlay and interval in milliseconds.</p>
-              <p>For more information, please see the <a [routerLink]="['/features/common']">PlayConfig</a>'s section</p>
+              <p>Optional configuration object for auto-navigation behavior, including the autoPlay setting and transition interval in milliseconds.</p>
+              <p>For more information, see the <a [routerLink]="['/features/common']">PlayConfig</a> section.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -267,7 +265,7 @@
             </div>
             <div>
               <p>Optional object used to configure dots.</p>
-              <p>For more information, please see the <code><a [routerLink]="['/features/common']">DotsConfig</a></code>'s section</p>
+              <p>For more information, see the <code><a [routerLink]="['/features/common']">DotsConfig</a></code> section.</p>
             </div>
             <div>
               <p>Default value:</p>
@@ -285,7 +283,7 @@
             </div>
             <div>
               <p>Optional property to configure infinite sliding of the carousel.</p>
-              <p>If true, carousel won't stop at the last image, but it will restart from the first image. <code>true</code> by default.</p>
+              <p>When <code>true</code>, the carousel loops back to the first image after the last. Defaults to <code>true</code>.</p>
             </div>
             <div>
               <p>Default value:</p>

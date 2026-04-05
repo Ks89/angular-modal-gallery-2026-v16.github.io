@@ -4,15 +4,15 @@
   <h1 id="Common" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Common</a>
   </h1>
-  <p>Common interfaces and classes used by all components of this library.
+  <p>Common interfaces and classes shared across all components of this library.
 
     <br>
 
   <h2 id="Image" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Image</a>
   </h2>
-  <p>The main object that represents an Image with both modal, thumbnail, description and so on.
-    The first thing to do is creating an array of <code>Image</code> instances (using the new keyword). Every element represents a single image.</p>
+  <p>The primary object representing an image, including modal, thumbnail, and description data.
+    Begin by creating an array of <code>Image</code> instances (using the <code>new</code> keyword), where each element represents a single image.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -45,7 +45,7 @@
           <i>Type: </i><code>'eager' | 'lazy'</code>
         </div>
         <div>
-          <p>Optional string to configure how the browser will load image. lazy by default.</p>
+          <p>Optional string to configure the browser's image loading strategy. Defaults to <code>lazy</code>.</p>
         </div>
       </td>
     </tr>
@@ -56,7 +56,7 @@
           <i>Type: </i><code>'high' | 'low' | 'auto'</code>
         </div>
         <div>
-          <p>Optional string to configure the download's priority of the image (Chrome). auto by default.</p>
+          <p>Optional string to configure the image download priority (Chromium-based browsers). Defaults to <code>auto</code>.</p>
         </div>
       </td>
     </tr>
@@ -89,7 +89,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>If true, dots are visible, false otherwise. true by default.</p>
+          <p>When <code>true</code>, navigation dots are visible; when <code>false</code>, they are hidden. Defaults to <code>true</code>.</p>
         </div>
       </td>
     </tr>
@@ -111,9 +111,9 @@
           <i>Type: </i><code>string</code>
         </div>
         <div>
-          <p style="margin-bottom: 0;">It can be a valid value for the css 'width' property.</p>
-          <p style="margin-bottom: 0;">For instance, you can use either '100px', 'auto', '20%'.</p>
-          <p style="margin-bottom: 0;">Default values change depending by the related component.</p>
+          <p style="margin-bottom: 0;">Accepts any valid CSS <code>width</code> value.</p>
+          <p style="margin-bottom: 0;">Examples: <code>'100px'</code>, <code>'auto'</code>, <code>'20%'</code>.</p>
+          <p style="margin-bottom: 0;">Default values vary by component.</p>
         </div>
       </td>
     </tr>
@@ -124,9 +124,9 @@
           <i>Type: </i><code>string</code>
         </div>
         <div>
-          <p style="margin-bottom: 0;">It can be a valid value for the css 'height' property.</p>
-          <p style="margin-bottom: 0;">For instance, you can use either '100px', 'auto', '20%'.</p>
-          <p style="margin-bottom: 0;">Default values change depending by the related component.</p>
+          <p style="margin-bottom: 0;">Accepts any valid CSS <code>height</code> value.</p>
+          <p style="margin-bottom: 0;">Examples: <code>'100px'</code>, <code>'auto'</code>, <code>'20%'</code>.</p>
+          <p style="margin-bottom: 0;">Default values vary by component.</p>
         </div>
       </td>
     </tr>
@@ -137,14 +137,14 @@
   <h2 id="Action" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Action</a>
   </h2>
-  <p>Enum that represents the source of an action. It can be one of these enum values:</p>
+  <p>Enum representing the source of an action. Possible values:</p>
   <br>
   <ul>
-    <li><code>NORMAL</code>: the default value</li>
-    <li><code>CLICK</code>: mouse click action</li>
-    <li><code>KEYBOARD</code>: keyboard action (<kbd>ctrl</kbd>+<kbd>s</kbd>, <kbd>cmd</kbd>+<kbd>s</kbd>, <kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd> and so on)</li>
-    <li><code>SWIPE</code>: swipe action</li>
-    <li><code>LOAD</code>: data/images loaded by the library</li>
-    <li><code>AUTOPLAY</code>: navigation caused by autoPlay</li>
+    <li><code>NORMAL</code>: the default action type</li>
+    <li><code>CLICK</code>: triggered by a mouse click</li>
+    <li><code>KEYBOARD</code>: triggered by a keyboard input (e.g., <kbd>ctrl</kbd>+<kbd>s</kbd>, <kbd>cmd</kbd>+<kbd>s</kbd>, <kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd>)</li>
+    <li><code>SWIPE</code>: triggered by a swipe gesture</li>
+    <li><code>LOAD</code>: triggered when data or images are loaded by the library</li>
+    <li><code>AUTOPLAY</code>: triggered by autoPlay navigation</li>
   </ul>
 </div>

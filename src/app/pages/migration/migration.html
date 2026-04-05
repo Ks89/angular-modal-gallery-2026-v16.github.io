@@ -74,7 +74,7 @@
         <p><b>Remove <code>hammerjs</code> and <code>mousetrap</code> from your <code>package.json</code> and all imports from your application.</b></p>
         <br>
         <h4>Step 4 - remove 'keyboardServiceConfig' from 'ModalLibConfig' configuration object</h4>
-        <p>Without <code>mousetrap</code> you won't be able to customize download shortcuts anymore.</p>
+        <p>Removing <code>mousetrap</code> disables the ability to customize keyboard download shortcuts.</p>
       </section>
       <br>
       <br>
@@ -104,9 +104,9 @@
 
         <br>
 
-        <h4>Step 3 - remove the generic <code>LibConfig</code> interface, because no more exported.</h4>
+        <h4>Step 3 - remove the generic <code>LibConfig</code> interface, which is no longer exported</h4>
 
-        <p>Choose the specific interfaces based on your needs</p>
+        <p>Select the appropriate interface based on your use case:</p>
         <ul>
           <li>in modal-gallery configuration use <code>ModalLibConfig</code></li>
           <li>in plain-gallery configuration use <code>PlainLibConfig</code></li>
@@ -126,32 +126,32 @@
 
         <h4>Step 5 - update carousel</h4>
         <ul>
-          <li>IE11 legacy mode has been removed from the library, because Angular doesn't support Internet Explorer 11 anymore.
-            So remove <code>legacyIE11Mode: true</code> in your code
+          <li>IE11 legacy mode has been removed from the library, as Angular no longer supports Internet Explorer 11.
+            Remove any occurrences of <code>legacyIE11Mode: true</code> from your code.
           </li>
           <li>remove <code>[previewConfig]</code> and <code>[carouselConfig]</code> inputs from HTML, because replaced with a single <code>[config]="..."</code> like all other components of the library.
             For more information check the <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">official example</a> and the
             <a href="https://ks89.github.io/angular-modal-gallery-2022-v10.github.io/features/carousel">documentation page</a>.
-            Don't be scared, it's easies then you think. You only need to pass an object moving previews configuration inside it.
+            The migration is straightforward: simply nest the preview configuration within the new configuration object.
           </li>
           <li>rename <code>(showImage)="..."</code> output into <code>(changeImage)="..."</code> output</li>
         </ul>
 
         <br>
 
-        <h4>Step 6 - <code>KeyboardEvent.keyCode</code> is no more supported</h4>
-        <p>If you are using custom keyCodes via <code>keyboardConfig</code> you have to migrate to the newer <code>KeyboardEvent.code</code></p>
-        <p>For more information, please check the <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code">MDN documentation here</a>.</p>
+        <h4>Step 6 - <code>KeyboardEvent.keyCode</code> is no longer supported</h4>
+        <p>If you are using custom key codes via <code>keyboardConfig</code>, migrate to the newer <code>KeyboardEvent.code</code> API.</p>
+        <p>For more information, refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code">MDN documentation</a>.</p>
 
-        <p>As a quick example. Previously, you were using integer keyCodes:</p>
+        <p>For example, previously you used integer key codes:</p>
         <pre>
         keyboardConfig: &#123;
           esc: 81, // Q keyCode
           left: 40, // Arrow down keyCode
-          right: 38 // Arrow ip keyCode
+          right: 38 // Arrow up keyCode
         &#125;
         </pre>
-        <p>instead, starting from v9.0.0, you have to use the equivalent codes:</p>
+        <p>Starting from v9.0.0, use the equivalent string-based codes instead:</p>
         <pre>
         keyboardConfig: &#123;
           esc: 'KeyQ',
@@ -176,9 +176,9 @@
         <p>Use the latest version of Angular (with the recommended rxjs version). It must be Angular 12 or higher.</p>
 
         <br>
-        <h4>Step 3 - be sure to install the mandatory dependency `&#64;angular/cdk`</h4>
+        <h4>Step 3 - install the mandatory dependency <code>&#64;angular/cdk</code></h4>
 
-        <p>&#64;angular/cdk is mandatory to support responsiveness of carousel component and to show modal gallery.</p>
+        <p><code>&#64;angular/cdk</code> is required to support carousel responsiveness and modal gallery rendering.</p>
 
         <p>Run in your terminal: <code>npm install --save &#64;angular/cdk</code></p>
 
@@ -222,7 +222,7 @@
     [config]="libConfigPlainGallery"
     (showImage)="onShow(1, $event)"&gt;&lt;/ks-plain-gallery&gt;
         </pre>
-        <p>Then add the LibConfig object and <code>onShow</code> method in Typescript component:</p>
+        <p>Then add the <code>LibConfig</code> object and <code>onShow</code> method to your TypeScript component:</p>
         <pre>
   images: Image[]; // init this value with your images
 
@@ -246,7 +246,7 @@
         <br>
         <h5>Modal Gallery</h5>
 
-        <p>In case of Modal Galley, you have to remove HTML selector from all you HTML files, because now it's an Angular service and not a component.</p>
+        <p>For the modal gallery, remove the HTML selector from all template files. It has been refactored from a component to an Angular service.</p>
       </section>
     </div>
   </div>

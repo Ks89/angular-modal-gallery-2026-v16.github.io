@@ -161,7 +161,7 @@
 
       <section class="container">
         <h2>Supported Browsers</h2>
-        <p>Starting from version 9.0.0 of this library, Internet Explorer 11 and legacy Microsoft Edge (pre-chromium) are not supported!</p>
+        <p>As of version 9.0.0, Internet Explorer 11 and legacy Microsoft Edge (pre-Chromium) are no longer supported.</p>
       </section>
       <br>
 
@@ -174,27 +174,27 @@
           <li><code>npm i --save &#64;angular/cdk</code></li>
         </ul>
 
-        <p>Please note that if you need angular-modal-gallery versions 5 or 3, you must use the older npm package called <a href="https://www.npmjs.com/package/angular-modal-gallery">angular-modal-gallery</a> without &#64;ks89 scope.</p>
+        <p>If you require angular-modal-gallery version 5 or 3, use the legacy npm package <a href="https://www.npmjs.com/package/angular-modal-gallery">angular-modal-gallery</a> (without the &#64;ks89 scope).</p>
 
-        <p>All default icons don't require font-awesome, so starting from angular-modal-gallery 5.0.0 font-awesome is optional.
-          However, if you want to use custom button icons, you are free to use either your own css or font-awesome (versions 4 or 5).
-          Font Awesome 5 is officially supported from angular-modal-gallery 5.3.0 or greater.</p>
+        <p>Default icons do not require Font Awesome. Starting from angular-modal-gallery 5.0.0, Font Awesome is optional.
+          To use custom button icons, you may provide your own CSS or use Font Awesome (versions 4 or 5).
+          Font Awesome 5 is officially supported from angular-modal-gallery 5.3.0 and later.</p>
       </section>
       <br>
 
       <section class="container">
         <h2>Update your project</h2>
         <p>After installing the dependencies, follow the steps below.</p>
-        <p>These instructions apply to Angular CLI projects only. If you are using <code>&#64;angular/universal</code>, please refer to the <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
+        <p>These instructions apply to Angular CLI projects. If you are using <code>&#64;angular/universal</code>, please refer to the <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
         <br>
         <h3>Step 1: Import dependencies</h3>
         <h4>Standalone components</h4>
-        <p>If your project uses standalone components, import <code>GalleryModule</code> using <code>importProvidersFrom</code> and pass <code>appConfig</code> to <code>bootstrapApplication</code></p>
+        <p>If your project uses standalone components, import <code>GalleryModule</code> via <code>importProvidersFrom</code> and pass <code>appConfig</code> to <code>bootstrapApplication</code>:</p>
         <pre>
         bootstrapApplication(AppComponent, appConfig)
           .catch((err) => console.error(err));
         </pre>
-        <p>Then use <code>importProvidersFrom</code> to load <code>GalleryModule</code> in this way</p>
+        <p>Then configure <code>importProvidersFrom</code> to load <code>GalleryModule</code> as follows:</p>
         <pre>
         import &#123; GalleryModule &#125; from '&#64;ks89/angular-modal-gallery';
 
@@ -212,7 +212,7 @@
         </pre>
         <br>
         <h4>NgModule-based projects</h4>
-        <p>If your project still uses NgModules, import <code>GalleryModule</code> in your root module and any module that uses this library:</p>
+        <p>For NgModule-based projects, import <code>GalleryModule</code> in your root module and in every module that uses this library:</p>
         <pre>
         import &#123;GalleryModule&#125; from '&#64;ks89/angular-modal-gallery';
         &#64;NgModule(&#123;
@@ -240,7 +240,7 @@
         &#125;
         </pre>
 
-        <p>Note that <b>&#64;import</b> is deprecated. Always use <b>&#64;use ... as *</b>. For more details, refer to
+        <p>Note: <b>&#64;import</b> is deprecated. Always use <b>&#64;use ... as *</b>. For more details, refer to
           <a href="https://sass-lang.com/documentation/breaking-changes/import/">the official documentation</a></p>
         <br>
 

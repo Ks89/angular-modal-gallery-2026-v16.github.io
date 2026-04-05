@@ -83,7 +83,7 @@ export class Base64Component implements OnInit {
   images: Image[] = [
     new Image(0, {
       img: this.base64Image,
-      extUrl: 'http://www.google.com'
+      extUrl: 'https://www.google.com'
     }),
     new Image(1, {
       img: this.base64GreenImage,
@@ -94,7 +94,7 @@ export class Base64Component implements OnInit {
       {
         img: this.base64RedImage,
         description: 'Description 3',
-        extUrl: 'http://www.google.com'
+        extUrl: 'https://www.google.com'
       },
       {
         img: this.base64RedImage,
@@ -153,7 +153,7 @@ export class Base64Component implements OnInit {
   images: Image[] = [
     new Image(0, {
       img: this.base64Image,
-      extUrl: 'http://www.google.com'
+      extUrl: 'https://www.google.com'
     }),
     new Image(1, {
       img: this.base64GreenImage,
@@ -164,7 +164,7 @@ export class Base64Component implements OnInit {
       {
         img: this.base64RedImage,
         description: 'Description 3',
-        extUrl: 'http://www.google.com'
+        extUrl: 'https://www.google.com'
       },
       {
         img: this.base64RedImage,

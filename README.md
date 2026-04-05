@@ -1,8 +1,8 @@
-# angular-modal-gallery-2025-v15.github.io
-Official documentation website for @ks89/angular-modal-gallery 14.x.x library on npm
+# angular-modal-gallery-2026-v16.github.io
+Official documentation website for @ks89/angular-modal-gallery 16.x.x library on npm
 
 
-Live version [HERE](https://ks89.github.io/angular-modal-gallery-2025-v15.github.io/)
+Live version [HERE](https://ks89.github.io/angular-modal-gallery-2026-v16.github.io/)
 
 
 Created By @Ks89 (Stefano Cappa)

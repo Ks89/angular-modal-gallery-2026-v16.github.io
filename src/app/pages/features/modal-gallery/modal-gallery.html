@@ -4,8 +4,8 @@
   <h1 id="ModalGallery" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Modal Gallery</a>
   </h1>
-  <p>Modal Gallery is the main part of &#64;ks89/angular-modal-gallery. It shows the navigable collection of <code><a [routerLink]="['/features/common']">Images</a></code>
-    with buttons, previews and many other customizable features to fit your needs</p>
+  <p>Modal Gallery is the core component of &#64;ks89/angular-modal-gallery. It displays a navigable collection of <code><a [routerLink]="['/features/common']">Images</a></code>
+    with action buttons, previews, and many other customizable features.</p>
   <br>
 
   <h2>Live demo</h2>
@@ -15,26 +15,24 @@
 
   <h2>API</h2>
 
-  <p>Follow the getting started guide to install &#64;ks89/angular-modal-gallery and all requirements.</p>
-  <p>To use Modal Gallery in your application, invoke the <code>.open(...)</code> method of <code>ModalGalleryService</code>.
-    You are free to invoke this method wherever you want, for instance pressing a button.</p>
-  <p>Previous versions of &#64;ks89/angular-modal-gallery were very limited forcing you to add a selector into the HTML file, however,
-    now you can show Modal Gallery without adding UI element to you app, or even automatically after an event,
-    invoking the open method.</p>
-  <p>To keep everything simple, let say that we want to open Modal Gallery with a button and specifically we want to open the first image (index = 0) of an array of images,
-    exactly as the live demo above.
-    So in the component HTML file add this:</p>
+  <p>Follow the <a routerLink="/getting-started">Getting Started guide</a> to install &#64;ks89/angular-modal-gallery and all required dependencies.</p>
+  <p>To use the modal gallery in your application, invoke the <code>.open(...)</code> method of <code>ModalGalleryService</code>.
+    This method can be called from anywhere in your component, for example in response to a button click.</p>
+  <p>Unlike earlier versions, which required adding a selector to the HTML template, the modal gallery is now an Angular service.
+    It can be opened programmatically without adding any UI element to your template, or triggered automatically in response to any event.</p>
+  <p>As a basic example, to open the modal gallery with a button and display the first image (index 0) — as shown in the live demo above —
+    add the following to your component template:</p>
 
   <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
-  <p>Then, in your Typescript component init the images array with Image class instances and invoke the open method to show the modal gallery in this way:</p>
+  <p>In your TypeScript component, initialize the images array with <code>Image</code> instances and invoke the open method as follows:</p>
 
   <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
 
-  <p>To customize the modal gallery exploring all possibilities, see the table below to pass your configuration. To listen for modal gallery events, check the Output table.</p>
-  <p>To try more modal gallery live demos with custom configuration, please take a look at the <a routerLink="/demo">example section</a> of this website.</p>
+  <p>To explore all customization options for the modal gallery, refer to the configuration table below. To handle modal gallery events, see the Outputs table.</p>
+  <p>For additional live demos with custom configurations, refer to the <a routerLink="/demo">examples section</a> of this website.</p>
   <br>
 
   <section>
@@ -62,11 +60,11 @@
             The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent the
             modal images. In fact, an <code><a [routerLink]="['/features/common']">Image</a></code> is an object with
             image source paths and other additional configuration parameters. For more info check <code><a [routerLink]="['/features/common']">Image</a></code>.
-            Please don't use <code>this.images.push(img)</code>, when you want to modify this array, instead re-assign it to trigger change detection.
-            For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.
+            Avoid using <code>this.images.push(img)</code> to modify this array. Instead, re-assign it to trigger change detection.
+            For example: <code>this.images = [...this.images, newImage]</code> creates a new array with the additional image appended.
           </div>
           <div>
-            <b class="text-success">Warning: if you need to add the same image (same url) multiple times in the same modal gallery, you must append to the url a random but unique query param to prevent caching issues.
+            <b class="text-success">Warning: if you need to add the same image (same URL) multiple times in the same modal gallery, you must append a random but unique query parameter to the URL to prevent caching issues.
               For more info, please read <a href="https://github.com/Ks89/angular-modal-gallery/issues/171">this issue</a>.</b>
           </div>
         </td>
@@ -78,8 +76,8 @@
             <i>Type: </i><code><a [routerLink]="['/features/common']">Image</a></code>
           </div>
           <div>
-            The image object to show as soon the modal gallery opens. You should simply pass one of the element of the images array.
-            For instance, if you want to open the first image in the array, pass <code>images[0]</code>.
+            The image to display when the modal gallery opens. Pass one of the elements from the images array.
+            For example, to open the first image, pass <code>images[0]</code>.
           </div>
         </td>
       </tr>
@@ -122,7 +120,7 @@
         <td>
           <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>before</b> that the modal image will be visible.</p>
           <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number).</p>
-          <p>Everytime the current image changes, a new <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> will be emitted.</p>
+          <p>Every time the current image changes, a new <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> will be emitted.</p>
           <ul>
             <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a
               [routerLink]="['/features/common']">Action.KEYBOARD</a></code>, <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code>, <code><a [routerLink]="['/features/common']">Action.AUTOPLAY</a></code> or <code><a
@@ -177,8 +175,8 @@
           <p>A <code><a [routerLink]="['/features/upper-buttons']">ButtonEvent</a></code> right <b>before</b> the action related to an upper button.</p>
           <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum, the current <code><a [routerLink]="['/features/common']">Image</a></code> and the <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code>
             that triggered this event</p>
-          <p>This event is a 'before hook', because you can execute your code before every action triggered by buttons. Also, since you have the full
-            <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can execute different code based on button's type</p>
+          <p>This is a before-hook event, allowing you to execute custom logic prior to any button-triggered action. The full
+            <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> payload enables branching behavior based on the button type.</p>
           <ul>
             <li>action: <code><a [routerLink]="['/features/common']">Action.LOAD</a></code></li>
             <li>button: <code><code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code></code></li>
@@ -192,8 +190,8 @@
           <p>A <code><a [routerLink]="['/features/upper-buttons']">ButtonEvent</a></code> right <b>after</b> the action related to an upper button.</p>
           <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum, the current <code><a [routerLink]="['/features/common']">Image</a></code> and the <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code>
             that triggered this event</p>
-          <p>This event is an 'after hook', because you can execute your code after every action triggered by buttons. Also, since you have the full
-            <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can execute different code based on button's type</p>
+          <p>This is an after-hook event, allowing you to execute custom logic following any button-triggered action. The full
+            <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> payload enables branching behavior based on the button type.</p>
           <ul>
             <li>action: <code><a [routerLink]="['/features/common']">Action.LOAD</a></code></li>
             <li>button: <code><code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code></code></li>
@@ -225,9 +223,9 @@
           <i>Type: </i><code>string | SafeResourceUrl</code>
         </div>
         <div>
-          <p>Mandatory source path of the modal image. To support base64 images, check the official example.</p>
-          <p>If you need multiple non-base64 images with the same image path, to prevent caching issues append something like '?index', for instance '?0', '?1'.
-            For more information, please check the official example called 'Same images'.</p>
+          <p>The mandatory source path of the modal image. For base64 image support, refer to the official example.</p>
+          <p>If multiple non-base64 images share the same URL, append a unique query parameter (e.g., <code>?0</code>, <code>?1</code>) to prevent caching issues.
+            For more information, refer to the official "Same Images" example.</p>
         </div>
       </td>
     </tr>
@@ -238,9 +236,8 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>Optional description text.
-            Warning: this is not the full description, but only the last part, after image numbers.
-            For instance: `Image 2/12 - <code>description</code>`. To ignore this feature, don't add this property.</p>
+          <p>Optional description text. Note: this is not the full description, but only the trailing portion following the image count.
+            For example: <code>Image 2/12 - description</code>. To omit this feature, simply exclude this property.</p>
         </div>
       </td>
     </tr>
@@ -251,8 +248,8 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>Optional external URL path. You must use a valid URL, because &#64;ks89/angular-modal-gallery
-            will simply navigate to this URL. To ignore this feature, don't add this property.</p>
+          <p>Optional external URL. Must be a valid URL, as &#64;ks89/angular-modal-gallery navigates directly to it.
+            To omit this feature, exclude this property.</p>
         </div>
       </td>
     </tr>
@@ -310,7 +307,7 @@
           <i>Type: </i><code>Source[]</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>Optional array of sources for setting srcsets at media breakpoints</p>
+          <p>Optional array of sources for defining <code>srcset</code> values at responsive media breakpoints.</p>
         </div>
       </td>
     </tr>
@@ -376,8 +373,8 @@
           <i>Type: </i><code>number | boolean</code>
         </div>
         <div>
-          <p>The result/data of the emitted event. For example, it could be the index of the current image
-            or a boolean to say if images are ready to display and so on.</p>
+          <p>The result or data payload of the emitted event. For example, it may represent the index of the current image
+            or a boolean indicating whether images are ready to display.</p>
         </div>
       </td>
     </tr>
@@ -400,12 +397,12 @@
           <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
-            or <kbd>cmd</kbd>+<kbd>s</kbd>),
-            but the download button will be visible only when <code>showDownloadButton=true</code>. Otherwise,
-            all download features will be disabled. <code>downloadable=false</code> by default</p>
-          <p>Please be careful: on SmartPhones and Tablets you can't use keyboard shortcuts, so to download images, please enable <code>downloadable</code> and use
-            <a [routerLink]="['/features/upper-buttons']"><code>ButtonsStrategy.SIMPLE</code></a> or higher to add the download button.</p>
+          <p>When <code>true</code>, the current modal image can always be downloaded via the keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
+            or <kbd>cmd</kbd>+<kbd>s</kbd>).
+            The download button is only visible when <code>showDownloadButton=true</code>. When <code>false</code>,
+            all download functionality is disabled. Defaults to <code>false</code>.</p>
+          <p>Note: keyboard shortcuts are unavailable on smartphones and tablets. To enable image downloads on touch devices, set <code>downloadable=true</code> and use
+            <a [routerLink]="['/features/upper-buttons']"><code>ButtonsStrategy.SIMPLE</code></a> or higher to display the download button.</p>
         </div>
       </td>
     </tr>
@@ -431,20 +428,19 @@
           <i>Type: </i><code><a [routerLink]="['/features/description']">Description</a></code> interface<span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>Interface to specify a custom description either a full string or an object with string properties.
-            The first one is the entire string (for instance 'Description of Image 1/2 - My family - bla bla'),
-            the second one is an object with these properties <code>imageText</code> (default is 'Image'),
-            <code>numberSeparator</code> (default is '/'), <code>beforeTextDescription</code> (default is ' - ').
-            You can also use HTML descriptions, but remember that Angular will sanitize dangerous code, so for
-            instance you cannot add input fields and so on, but only simple and secure HTML.
+          <p>Interface for specifying a custom description, either as a complete string or as an object with individual string properties.
+            The full string form accepts a complete description (e.g., <code>'Image 1/2 - My family'</code>).
+            The object form supports <code>imageText</code> (default: <code>'Image'</code>),
+            <code>numberSeparator</code> (default: <code>'/'</code>), and <code>beforeTextDescription</code> (default: <code>' - '</code>).
+            HTML content is supported in descriptions; however, Angular sanitizes potentially unsafe markup, so only safe HTML elements are permitted.
           </p>
           <p>
-            To customize part of the description, you can refer to this example: <small>`<code>imageText</code> <i>2</i> <code>numberSeparator</code> <i>12</i> <code>beforeTextDescription</code> <i>bla bla</i>`</small>.
-            As you can see, "red" parts are customizable using the three properties described above. Furthermore, `<i>2</i>` is the index of the visible image, `<i>12</i>` the total number of images and `<i>bla bla</i>`
-            the description passed thanks to the input <code><a [routerLink]="['/features/common']">Image</a></code> object.
+            To customize individual parts of the description, refer to this pattern: <small><code>imageText</code> <i>2</i> <code>numberSeparator</code> <i>12</i> <code>beforeTextDescription</code> <i>description text</i></small>.
+            The three configurable properties correspond to the prefix, separator, and preceding text. <i>2</i> is the index of the currently displayed image, <i>12</i> is the total image count, and the description text comes from the
+            <code><a [routerLink]="['/features/common']">Image</a></code> input object.
           </p>
-          <p>Warning please! There aren't spaces between values. So if you want a 'text - text' specify exactly ' - ', with the two spaces</p>
-          <p>Also, from version 5.4.0, you can use this interface to change description's style.</p>
+          <p>Note: values are concatenated without additional spacing. To produce output such as <code>'text - text'</code>, specify <code>' - '</code> (including the surrounding spaces).</p>
+          <p>From version 5.4.0 onwards, this interface can also be used to customize the description's visual style.</p>
         </div>
       </td>
     </tr>
@@ -568,7 +564,7 @@
           <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>If <code>false</code>, infinite sliding is visible, otherwise not</p>
+          <p>When <code>true</code>, enables infinite sliding. When <code>false</code>, navigation stops at the first and last image.</p>
         </div>
       </td>
     </tr>
@@ -687,9 +683,8 @@
           <i>Return types: </i><code>ModalGalleryRef | undefined</code> to listen for events.
         </div>
         <div>
-          <p>Method to open modal gallery with a specific id, an image (index) of modal gallery (id). You have to provide both an index >= 0 and a galleryId >= 0.
-            Also, remember that ids must be unique across your web page,
-            so every instance of modal gallery must have a different id.</p>
+          <p>Opens the modal gallery for the specified gallery <code>id</code> at the given image index. Both the index and the gallery ID must be >= 0.
+            Gallery IDs must be unique across the entire page; each instance of the modal gallery requires a distinct ID.</p>
         </div>
       </td>
     <tr>
@@ -699,9 +694,9 @@
           <i>Input types: </i><code>id: number | undefined</code> and <code>clickOutside: boolean</code>
         </div>
         <div>
-          <p>Method to close the modal gallery with id equals to the modal gallery id to close.
-            You should pass false as clickOutside, except when you want to close the gallery only
-            if 'enableCloseOutside' of <code>ModalLibConfig</code> is defined and equals to true.</p>
+          <p>Closes the modal gallery identified by the specified <code>id</code>.
+            Pass <code>false</code> for <code>clickOutside</code> in most cases. Pass <code>true</code> only when the close should be conditional on
+            <code>enableCloseOutside</code> being set to <code>true</code> in <code>ModalLibConfig</code>.</p>
         </div>
       </td>
     </tr>
@@ -724,7 +719,7 @@
   <h2 id="ModalGalleryRef" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalGalleryRef</a>
   </h2>
-  <p>Object returned by the open() method to listen for events emitted by the modal-gallery.</p>
+  <p>The object returned by the <code>open()</code> method, providing Observables to subscribe to events emitted by the modal gallery.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -802,16 +797,16 @@
   <h2 id="LoadingType" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">LoadingType</a>
   </h2>
-  <p>Enum that represents the type of the loading spinner. It can be one of these enum values:</p>
+  <p>Enum representing the loading spinner type. Possible values:</p>
   <br>
   <ul>
     <li><code>STANDARD</code>: the default spinner</li>
     <li><code>CIRCULAR</code>: a circular spinner</li>
-    <li><code>BARS</code>: spinner built with some animated vertical bars</li>
-    <li><code>DOTS</code>: spinner composed by animated dots</li>
-    <li><code>CUBE_FLIPPING</code>: flipping cube spinner</li>
-    <li><code>CIRCLES</code>: spinner composed by multiple circles</li>
-    <li><code>EXPLOSING_SQUARES</code>: spinner composed by 4 squares moving outside</li>
+    <li><code>BARS</code>: spinner composed of animated vertical bars</li>
+    <li><code>DOTS</code>: spinner composed of animated dots</li>
+    <li><code>CUBE_FLIPPING</code>: a flipping cube spinner</li>
+    <li><code>CIRCLES</code>: spinner composed of multiple circles</li>
+    <li><code>EXPLOSING_SQUARES</code>: spinner composed of 4 outward-expanding squares</li>
   </ul>
 
   <br>
@@ -819,7 +814,7 @@
   <h2 id="KeyboardEnum" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">KeyboardEnum</a>
   </h2>
-  <p>Enum that represents keyboard's keycodes. It can be one of these enum values:</p>
+  <p>Enum representing keyboard key codes. Possible values:</p>
   <br>
   <ul>
     <li><code>ESC</code>: 'Escape'</li>

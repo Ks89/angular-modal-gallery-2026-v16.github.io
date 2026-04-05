@@ -4,14 +4,14 @@
   <h1 id="Previews" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Previews</a>
   </h1>
-  <p>Previews component contains previews with navigation arrows.</p>
+  <p>The Previews component displays thumbnail previews with navigation arrows.</p>
   <br>
 
   <section>
     <h2 id="PreviewConfig" class="link clickable">
       <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PreviewConfig</a>
     </h2>
-    <p>Interface to configure previews (not 'side-previews', but those at the bottom) in modal gallery.</p>
+    <p>Interface for configuring the bottom previews in modal gallery (distinct from side-previews).</p>
     <br>
     <table class="table table-hover table-sm">
       <tbody>
@@ -50,7 +50,7 @@
             <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>If false, preview's navigation arrows are visible, otherwise not. <code>true</code> by default.</p>
+            <p>If false, the previews' navigation arrows are hidden. <code>true</code> by default.</p>
           </div>
         </td>
       </tr>
@@ -63,7 +63,7 @@
             <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>If false, previous won't be clickable, otherwise not. <code>true</code> by default.</p>
+            <p>If false, previews won't be clickable. <code>true</code> by default.</p>
           </div>
         </td>
       </tr>
@@ -76,8 +76,7 @@
             <i>Type: </i><code>Size</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>You can change the default size of previews. <code>width: 50px</code> and <code>height: auto</code> by
-              default.</p>
+            <p>Overrides the default preview size. Defaults to <code>width: 50px</code> and <code>height: auto</code>.</p>
           </div>
         </td>
       </tr>
@@ -128,7 +127,7 @@
             <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>If false, preview's navigation arrows are visible, otherwise not. <code>true</code> by default.</p>
+            <p>If false, the previews' navigation arrows are hidden. <code>true</code> by default.</p>
           </div>
         </td>
       </tr>
@@ -141,7 +140,7 @@
             <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>If false, previous won't be clickable, otherwise not. <code>true</code> by default.</p>
+            <p>If false, previews won't be clickable. <code>true</code> by default.</p>
           </div>
         </td>
       </tr>
@@ -154,7 +153,7 @@
             <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>You can change the width of previews. <code>25%</code> by default.</p>
+            <p>Overrides the default preview width. Defaults to <code>25%</code>.</p>
           </div>
         </td>
       </tr>
@@ -167,7 +166,7 @@
             <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>You can change the maximum height of previews ignoring higher values if specified in breakpoints. <code>200px</code> by default.</p>
+            <p>Sets the maximum preview height. Overrides any larger values defined in breakpoints. Defaults to <code>200px</code>.</p>
           </div>
         </td>
       </tr>
@@ -180,7 +179,7 @@
             <i>Type: </i><code>BreakpointsConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>You can change the heights at different window's width. <code>xSmall: 100, small: 100, medium: 150, large: 200, xLarge: 200</code> by default.</p>
+            <p>Defines preview heights at different viewport widths. Defaults to <code>xSmall: 100, small: 100, medium: 150, large: 200, xLarge: 200</code>.</p>
           </div>
         </td>
       </tr>
@@ -193,7 +192,7 @@
   <h2 id="BreakpointsConfig" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">BreakpointsConfig</a>
   </h2>
-  <p>Interface to customize carousel previews heights at different window's sizes.</p>
+  <p>Interface for customizing carousel preview heights at different viewport sizes.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>

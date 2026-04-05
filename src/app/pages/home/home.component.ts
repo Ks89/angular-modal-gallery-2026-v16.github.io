@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   images: Image[] = [
     new Image(0, {
       img: `${PATH}/assets/images/gallery/img1.jpg`,
-      extUrl: `http://www.google.com`
+      extUrl: `https://www.google.com`
     }),
     new Image(1, {
       img: `${PATH}/assets/images/gallery/img2.jpg`,
@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
       {
         img: `${PATH}/assets/images/gallery/img3.jpg`,
         description: `Description 3`,
-        extUrl: `http://www.google.com`
+        extUrl: `https://www.google.com`
       },
       {
         img: `${PATH}/assets/images/gallery/thumbs/img3.png`,
@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
     new Image(3, {
       img: `${PATH}/assets/images/gallery/img4.jpg`,
       description: `Description 4`,
-      extUrl: `http://www.google.com`
+      extUrl: `https://www.google.com`
     }),
     new Image(4, {
       img: `${PATH}/assets/images/gallery/img5.jpg`

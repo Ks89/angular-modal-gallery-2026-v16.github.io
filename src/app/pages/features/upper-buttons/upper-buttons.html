@@ -3,7 +3,7 @@
   <h1 id="UpperButtons" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">UpperButtons</a>
   </h1>
-  <p>UpperButtons component contains buttons receiving a <code>ButtonsConfig</code> as input</p>
+  <p>The UpperButtons component renders action buttons configured via <code>ButtonsConfig</code>.</p>
 
   <br>
 
@@ -32,7 +32,7 @@
           <i>Type: </i><code>ButtonsStrategy</code>
         </div>
         <div>
-          <p>Enum to decide which buttons are visible, based on some patterns (default, simple, advanced...). ButtonsStrategy.DEFAULT by default.</p>
+          <p>Enum controlling which buttons are visible, based on predefined patterns (default, simple, advanced, etc.). Defaults to <code>ButtonsStrategy.DEFAULT</code>.</p>
         </div>
       </td>
     </tr>
@@ -43,7 +43,7 @@
           <i>Type: </i><code>ButtonConfig[]</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>If you choose <code>ButtonsStrategy.CUSTOM</code> you can add your buttons to this array</p>
+          <p>When using <code>ButtonsStrategy.CUSTOM</code>, provide an array of custom button configurations here.</p>
         </div>
       </td>
     </tr>
@@ -55,7 +55,7 @@
   <h2 id="ButtonEvent" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ButtonEvent</a>
   </h2>
-  <p>Interface that represent a button event.</p>
+  <p>Interface representing a button event.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -66,7 +66,7 @@
           <i>Type: </i><code>ButtonConfig</code>
         </div>
         <div>
-          <p>The button configuration / representation</p>
+          <p>The configuration object representing the button.</p>
         </div>
       </td>
     </tr>
@@ -77,7 +77,7 @@
           <i>Type: </i><code>Image | null</code>
         </div>
         <div>
-          <p>The current <code><a [routerLink]="['/features/common']">Image</a></code> object</p>
+          <p>The currently displayed <code><a [routerLink]="['/features/common']">Image</a></code> object.</p>
         </div>
       </td>
     </tr>
@@ -99,7 +99,7 @@
           <i>Type: </i><code>number</code>
         </div>
         <div>
-          <p>Unique id of the current instance of modal, carousel of plain galleries.</p>
+          <p>Unique id of the current instance of modal, carousel, or plain galleries.</p>
         </div>
       </td>
     </tr>
@@ -111,7 +111,7 @@
   <h2 id="ButtonConfig" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ButtonConfig</a>
   </h2>
-  <p>Interface that represent a button.</p>
+  <p>Interface representing a button configuration.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -122,7 +122,7 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>To specify the css class name with the icon (for instance, with Font Awesome, you can use 'fa fa-close')</p>
+          <p>Specifies the CSS class name for the button icon (e.g., with Font Awesome: <code>'fa fa-close'</code>).</p>
         </div>
       </td>
     </tr>
@@ -133,8 +133,8 @@
           <i>Type: </i><code>Size</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>To choose the size of the button (if you are using fonts as icons please check 'fontSize').
-            <code>width: 30px</code> and <code>height auto</code> by default</p>
+          <p>Specifies the button dimensions. If using a font icon, refer to the <code>fontSize</code> property instead.
+            Defaults to <code>width: 30px</code> and <code>height: auto</code>.</p>
         </div>
       </td>
     </tr>
@@ -145,7 +145,7 @@
           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>To specify the size of the font ('font-size' css property) if you are using a font as icon (for instance, with Font Awesome)</p>
+          <p>Specifies the font size (CSS <code>font-size</code> property) when a font icon is used (e.g., with Font Awesome).</p>
         </div>
       </td>
     </tr>
@@ -156,7 +156,7 @@
           <i>Type: </i><code>ButtonType</code>
         </div>
         <div>
-          <p>Enum to specify the type of the button. If you want to create a custom button, use <code>ButtonType.CUSTOM</code></p>
+          <p>Enum specifying the button type. Use <code>ButtonType.CUSTOM</code> to define a fully custom button.</p>
         </div>
       </td>
     </tr>
@@ -191,7 +191,7 @@
           <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
         </div>
         <div>
-          <p>To open in a new tab (instead of the current one) the url specified in extUrl property</p>
+          <p>When <code>true</code>, opens the URL specified in the <code>extUrl</code> property in a new browser tab.</p>
         </div>
       </td>
     </tr>
@@ -204,7 +204,7 @@
   <h2 id="ButtonsStrategy" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ButtonsStrategy</a>
   </h2>
-  <p>Enum to decide which buttons are visible or not. It can be one of these enum values:</p>
+  <p>Enum controlling button visibility. Possible values:</p>
   <br>
   <ul>
     <li><code>DEFAULT</code>: only close button</li>
@@ -219,14 +219,14 @@
   <h2 id="ButtonType" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ButtonType</a>
   </h2>
-  <p>Enum that represent the button's type. It can be one of these enum values:</p>
+  <p>Enum representing the button type. Possible values:</p>
   <br>
   <ul>
     <li><code>DELETE</code>: delete button</li>
     <li><code>EXTURL</code>: extUrl button (to open a link in the current tab)</li>
     <li><code>DOWNLOAD</code>: download button</li>
     <li><code>CLOSE</code>: close button</li>
-    <li><code>CUSTOM</code>: custom button created by you from scratch (behaviour, icons and so on)</li>
+    <li><code>CUSTOM</code>: a fully custom button with user-defined behavior, icons, and styling</li>
     <li><code>FULLSCREEN</code>: full-screen button</li>
   </ul>
 
@@ -235,14 +235,14 @@
   <h2 id="Action" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Action</a>
   </h2>
-  <p>Enum that represents the source of an action. It can be one of these enum values:</p>
+  <p>Enum representing the source of an action. Possible values:</p>
   <br>
   <ul>
-    <li><code>NORMAL</code>: the default value</li>
-    <li><code>CLICK</code>: mouse click action</li>
-    <li><code>KEYBOARD</code>: keyboard action (<kbd>ctrl</kbd>+<kbd>s</kbd>, <kbd>cmd</kbd>+<kbd>s</kbd>, <kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd> and so on)</li>
-    <li><code>SWIPE</code>: swipe action</li>
-    <li><code>LOAD</code>: data/images loaded by the library</li>
-    <li><code>AUTOPLAY</code>: navigation caused by autoPlay</li>
+    <li><code>NORMAL</code>: the default action type</li>
+    <li><code>CLICK</code>: triggered by a mouse click</li>
+    <li><code>KEYBOARD</code>: triggered by a keyboard input (e.g., <kbd>ctrl</kbd>+<kbd>s</kbd>, <kbd>cmd</kbd>+<kbd>s</kbd>, <kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd>)</li>
+    <li><code>SWIPE</code>: triggered by a swipe gesture</li>
+    <li><code>LOAD</code>: triggered when data or images are loaded by the library</li>
+    <li><code>AUTOPLAY</code>: triggered by autoPlay navigation</li>
   </ul>
 </div>
