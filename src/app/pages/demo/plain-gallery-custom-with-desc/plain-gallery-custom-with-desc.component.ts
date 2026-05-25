@@ -32,7 +32,7 @@ import {
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { codemirrorHtml, codemirrorScss, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
@@ -50,6 +50,7 @@ export class PlainGalleryCustomWithDescComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
+  configScss: any = codemirrorScss;
   configTs: any = codemirrorTs;
 
   codeHtml: string;

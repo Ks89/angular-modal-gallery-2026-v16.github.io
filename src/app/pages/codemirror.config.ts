@@ -22,24 +22,21 @@
  * SOFTWARE.
  */
 
-export const codemirrorTs: any = {
-  lineNumbers: true,
-  readOnly: true,
-  theme: 'monokai',
-  mode: {
-    name: 'javascript', typescript: true
-  },
-  // force codemirror's height https://codemirror.net/demo/resize.html
-  viewportMargin: Infinity
-};
+import { css } from '@codemirror/lang-css';
+import { html } from '@codemirror/lang-html';
+import { javascript } from '@codemirror/lang-javascript';
+import { sass } from '@codemirror/lang-sass';
+import { Extension } from '@codemirror/state';
+import { oneDark } from '@codemirror/theme-one-dark';
+import { lineNumbers } from '@codemirror/view';
 
-export const codemirrorHtml: any = {
-  lineNumbers: true,
-  readOnly: true,
-  theme: 'monokai',
-  mode: {
-    name: 'htmlmixed'
-  },
-  // force codemirror's height https://codemirror.net/demo/resize.html
-  viewportMargin: Infinity
-};
+const codeBlockExtensions = (language: Extension): Extension[] => [
+  language,
+  oneDark,
+  lineNumbers()
+];
+
+export const codemirrorCss: Extension[] = codeBlockExtensions(css());
+export const codemirrorHtml: Extension[] = codeBlockExtensions(html());
+export const codemirrorScss: Extension[] = codeBlockExtensions(sass());
+export const codemirrorTs: Extension[] = codeBlockExtensions(javascript({ typescript: true }));

@@ -36,7 +36,7 @@ import {
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { codemirrorCss, codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 import { NgTemplateOutlet, DatePipe } from '@angular/common';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
@@ -62,6 +62,7 @@ export class PreviewsTemplateAdditionalDataComponent implements OnInit {
   images: Image[];
 
   configHtml: any = codemirrorHtml;
+  configCss: any = codemirrorCss;
   configTs: any = codemirrorTs;
 
   codeHtml: string;
