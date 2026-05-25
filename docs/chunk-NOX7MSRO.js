@@ -1,0 +1,1 @@
+import{$ as r,K as e}from"./chunk-YABA45OP.js";var n=class t{constructor(){this.titleEvent=new r}static{this.\u0275fac=function(i){return new(i||t)}}static{this.\u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})}};export{n as a};
