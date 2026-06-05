@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -30,6 +30,7 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 @Component({
   selector: 'app-previews-page',
   templateUrl: 'previews.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['previews.scss']
 })
 export class PreviewsComponent implements OnInit {

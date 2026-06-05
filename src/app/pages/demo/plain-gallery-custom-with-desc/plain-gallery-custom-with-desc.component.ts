@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Image,
@@ -40,6 +40,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   selector: 'app-plain-gallery-custom-with-desc-page',
   templateUrl: 'plain-gallery-custom-with-desc.html',
   styleUrls: ['plain-gallery-custom-with-desc.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class PlainGalleryCustomWithDescComponent implements OnInit {

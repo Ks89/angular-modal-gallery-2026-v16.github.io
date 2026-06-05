@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -44,6 +44,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-base64-page',
   templateUrl: 'base64.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class Base64Component implements OnInit {

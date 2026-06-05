@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
@@ -37,6 +37,7 @@ const PATH = environment.imgPath;
   imports: [
     NgOptimizedImage
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['navbar.scss']
 })
 export class NavbarComponent {

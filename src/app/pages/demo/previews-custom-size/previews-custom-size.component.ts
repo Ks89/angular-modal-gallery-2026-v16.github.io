@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Image,
@@ -43,6 +43,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-previews-custom-size-page',
   templateUrl: 'previews-custom-size.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class PreviewsCustomSizeComponent implements OnInit {

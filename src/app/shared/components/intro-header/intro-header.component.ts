@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { environment } from '../../../../environments/environment';
@@ -33,6 +33,7 @@ const PATH = environment.imgPath;
   selector: 'app-intro-header',
   templateUrl: 'intro-header.html',
   styleUrls: ['intro-header.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink]
 })
 export class IntroHeaderComponent {

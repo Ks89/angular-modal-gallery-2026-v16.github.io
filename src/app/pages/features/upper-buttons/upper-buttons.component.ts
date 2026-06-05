@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -32,6 +32,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-upper-buttons-page',
   templateUrl: 'upper-buttons.html',
   styleUrls: ['upper-buttons.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink]
 })
 export class UpperButtonsComponent implements OnInit {

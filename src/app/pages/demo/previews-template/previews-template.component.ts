@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, TemplateRef, inject, viewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, inject, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Image,
@@ -44,6 +44,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   selector: 'app-previews-template',
   templateUrl: './previews-template.component.html',
   styleUrls: ['./previews-template.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgTemplateOutlet, CodemirrorModule]
 })
 export class PreviewsTemplateComponent implements OnInit {

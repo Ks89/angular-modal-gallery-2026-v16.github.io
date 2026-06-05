@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { Accordion, AccordionService } from '../../../core/services/services';
@@ -32,6 +32,7 @@ import { NgOptimizedImage } from '@angular/common';
   selector: 'app-sidebar-demo',
   templateUrl: 'sidebar-demo.html',
   styleUrls: ['sidebar-demo.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, NgOptimizedImage]
 })
 export class SidebarDemoComponent implements OnInit {

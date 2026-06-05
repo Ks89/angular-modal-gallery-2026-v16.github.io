@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
@@ -46,6 +46,7 @@ import { JsonPipe } from '@angular/common';
   selector: 'app-output-events-page',
   templateUrl: 'output-events.html',
   styleUrls: ['output-events.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule, JsonPipe]
 })
 export class OutputEventsComponent implements OnInit, OnDestroy {

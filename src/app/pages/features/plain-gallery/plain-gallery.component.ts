@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -38,6 +38,7 @@ import { TableImageComponent } from '../../../shared/components/table-image/tabl
   selector: 'app-plain-gallery-page',
   templateUrl: 'plain-gallery.html',
   styleUrls: ['plain-gallery.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [PlainGalleryComponent_1, CodemirrorModule, RouterLink, TableLibconfigComponent, TableImageComponent]
 })
 export class PlainGalleryComponent implements OnInit {

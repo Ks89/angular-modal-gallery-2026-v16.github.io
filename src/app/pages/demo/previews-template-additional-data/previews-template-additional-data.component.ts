@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, TemplateRef, inject, viewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, inject, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Image,
@@ -50,6 +50,7 @@ interface CustomModalImage extends ModalImage {
   selector: 'app-previews-template',
   templateUrl: './previews-template-additional-data.component.html',
   styleUrls: ['./previews-template-additional-data.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgTemplateOutlet, CodemirrorModule, DatePipe]
 })
 export class PreviewsTemplateAdditionalDataComponent implements OnInit {

@@ -22,13 +22,14 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
   selector: 'app-about-page',
   templateUrl: 'about.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['about.scss']
 })
 

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 
 import { AccordionService } from './core/services/services';
@@ -32,6 +32,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NavbarComponent, RouterOutlet, FooterComponent]
 })
 export class AppComponent implements OnInit {

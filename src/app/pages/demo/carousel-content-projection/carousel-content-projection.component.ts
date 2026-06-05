@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -35,6 +35,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   selector: 'app-carousel-content-projection-page',
   templateUrl: 'carousel-content-projection.html',
   styleUrls: ['carousel-content-projection.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselContentProjectionComponent implements OnInit {

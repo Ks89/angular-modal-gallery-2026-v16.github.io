@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Image, ModalGalleryRef, ModalGalleryService, PlainGalleryComponent } from '@ks89/angular-modal-gallery';
 
@@ -36,6 +36,7 @@ const PATH = environment.imgPath;
 @Component({
   selector: 'app-home-page',
   templateUrl: 'home.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [IntroHeaderComponent, RouterLink, PlainGalleryComponent]
 })
 export class HomeComponent implements OnInit {

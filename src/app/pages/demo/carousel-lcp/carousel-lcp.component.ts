@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Image, CarouselComponent } from '@ks89/angular-modal-gallery';
 import { TitleService } from '../../../core/services/title.service';
@@ -34,6 +34,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-carousel-lcp-page',
   templateUrl: 'carousel-lcp.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselLcpComponent implements OnInit {

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   GridLayout,
@@ -45,6 +45,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-plain-gallery-layouts-page',
   templateUrl: 'plain-gallery-layouts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [PlainGalleryComponent, CodemirrorModule]
 })
 export class PlainGalleryLayoutsComponent implements OnInit {

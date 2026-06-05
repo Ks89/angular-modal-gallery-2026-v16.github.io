@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   ButtonsConfig,
@@ -43,6 +43,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-buttons-exturl-newtab-page',
   templateUrl: 'buttons-exturl-newtab.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class ButtonsExturlNewtabComponent implements OnInit {

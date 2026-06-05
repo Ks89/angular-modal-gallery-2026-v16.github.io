@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { TitleService } from '../../core/services/title.service';
@@ -32,6 +32,7 @@ import { SidebarFeaturesComponent } from '../../shared/components/sidebar-featur
   selector: 'app-features-page',
   templateUrl: 'features.html',
   styleUrls: ['features.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SidebarFeaturesComponent, RouterOutlet]
 })
 export class FeaturesComponent {

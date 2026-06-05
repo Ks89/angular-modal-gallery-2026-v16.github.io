@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   ButtonEvent,
@@ -45,6 +45,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-buttons-custom-fa-page',
   templateUrl: 'buttons-custom-fa.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class ButtonsCustomFaComponent implements OnInit, OnDestroy {

@@ -22,11 +22,12 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-table-image',
   templateUrl: 'table-image.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['table-image.scss']
 })
 export class TableImageComponent {

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -30,6 +30,7 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 @Component({
   selector: 'app-accessibility-page',
   templateUrl: 'accessibility.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['accessibility.scss']
 })
 export class AccessibilityComponent implements OnInit {

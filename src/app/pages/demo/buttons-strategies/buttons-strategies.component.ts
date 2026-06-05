@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
@@ -44,6 +44,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-buttons-strategies-page',
   templateUrl: 'buttons-strategies.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class ButtonsStrategiesComponent implements OnInit, OnDestroy {

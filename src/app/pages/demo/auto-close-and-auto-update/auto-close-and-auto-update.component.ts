@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Action,
@@ -43,6 +43,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-auto-close-and-auto-update-page',
   templateUrl: 'auto-close-and-auto-update.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class AutoCloseAndAutoUpdateComponent implements OnInit, OnDestroy {

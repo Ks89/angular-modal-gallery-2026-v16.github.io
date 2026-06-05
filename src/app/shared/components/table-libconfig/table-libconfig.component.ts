@@ -22,13 +22,14 @@
  * SOFTWARE.
  */
 
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-table-libconfig',
   templateUrl: 'table-libconfig.html',
   styleUrls: ['table-libconfig.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink]
 })
 export class TableLibconfigComponent {

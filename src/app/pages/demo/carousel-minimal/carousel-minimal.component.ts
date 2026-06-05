@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -34,6 +34,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-carousel-minimal-page',
   templateUrl: 'carousel-minimal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselMinimalComponent implements OnInit {

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -32,6 +32,7 @@ import { Metadata, UiService } from '../../core/services/ui.service';
   selector: 'app-getting-started-page',
   templateUrl: 'getting-started.html',
   styleUrls: ['getting-started.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink]
 })
 export class GettingStartedComponent implements OnInit {

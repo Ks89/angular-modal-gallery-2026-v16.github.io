@@ -22,7 +22,7 @@
 * SOFTWARE.
 */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Image, ModalLibConfig, ModalGalleryConfig,
@@ -40,6 +40,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 @Component({
   selector: 'app-invert-swipe-page',
   templateUrl: 'invert-swipe.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class InvertSwipeComponent implements OnInit {

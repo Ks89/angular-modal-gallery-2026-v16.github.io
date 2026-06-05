@@ -90,6 +90,24 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "testing": {
+              "aot": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "assets": [
+                "src/favicon.png",
+                "src/assets",
+                "src/browserconfig.xml",
+                "src/manifest.json",
+                "src/robots.txt",
+                "src/404.html",
+                "src/500.html"
+              ],
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -113,27 +131,11 @@
           "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.png",
-              "src/assets",
-              "src/browserconfig.xml",
-              "src/manifest.json",
-              "src/robots.txt",
-              "src/404.html",
-              "src/500.html"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           }
         }
       }

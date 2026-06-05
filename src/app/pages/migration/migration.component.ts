@@ -22,13 +22,14 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
   selector: 'app-migration-page',
   templateUrl: 'migration.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['migration.scss']
 })
 export class MigrationComponent implements OnInit {

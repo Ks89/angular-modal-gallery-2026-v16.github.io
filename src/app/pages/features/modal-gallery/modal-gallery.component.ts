@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Image, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, ModalLibConfig } from '@ks89/angular-modal-gallery';
 
@@ -39,6 +39,7 @@ import { TableImageComponent } from '../../../shared/components/table-image/tabl
   selector: 'app-modal-gallery-page',
   templateUrl: 'modal-gallery.html',
   styleUrls: ['modal-gallery.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class ModalGalleryComponent implements OnInit {

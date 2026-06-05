@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   CurrentImageConfig,
@@ -45,6 +45,7 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   selector: 'app-description-custom-page',
   templateUrl: 'description-custom.html',
   styleUrls: ['description-custom.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CodemirrorModule]
 })
 export class DescriptionCustomComponent implements OnInit {

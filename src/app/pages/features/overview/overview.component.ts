@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { environment } from '../../../../environments/environment';
@@ -35,6 +35,7 @@ const PATH = environment.imgPath;
   selector: 'app-overview-page',
   templateUrl: 'overview.html',
   styleUrls: ['overview.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink]
 })
 export class OverviewComponent implements OnInit {
