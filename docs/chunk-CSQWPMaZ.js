@@ -1,0 +1,1 @@
+import {U as Uv,t as tc,b as sI,n as nc}from'./main-B6H63E46.js';var i=class n{static{this.\u0275fac=function(e){return new(e||n)};}static{this.\u0275cmp=Uv({type:n,selectors:[["app-not-found-page"]],decls:2,vars:0,template:function(e,c){e&1&&(tc(0,"h3"),sI(1,"Error 404: Page not found"),nc());},encapsulation:2,changeDetection:1});}};export{i as NotFoundComponent};

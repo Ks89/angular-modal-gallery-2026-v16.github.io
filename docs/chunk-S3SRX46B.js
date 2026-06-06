@@ -1,1 +1,0 @@
-import{Ob as p,Wa as n,sb as t,tb as a}from"./chunk-YABA45OP.js";import"./chunk-2VMXMS7J.js";var m=class e{static{this.\u0275fac=function(o){return new(o||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-not-found-page"]],decls:2,vars:0,template:function(o,s){o&1&&(t(0,"h3"),p(1,"Error 404: Page not found"),a())},encapsulation:2})}};export{m as NotFoundComponent};

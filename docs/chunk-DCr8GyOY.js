@@ -1,0 +1,21 @@
+import {g}from'./chunk-C8CaFLi6.js';import {$ as $n,f as fn,v as vn,T as Tn}from'./chunk-C-_qsOA0.js';import {y,m,r,u as ur,U as Uv,a as Uo,b as sI,e as ec,F as Ff,q as qf,G as Gm,L as Lf}from'./main-B6H63E46.js';var h=class s{constructor(){this.uiService=y(m);this.titleService=y(r);this.modalGalleryService=y(ur);this.images=[...g];this.configHtml=$n;this.configTs=fn;this.titleService.titleEvent.emit("Examples - Infinite sliding"),this.codeHtml='<button (click)="openModal(318, 0)">Open modal gallery id=1 at index=0</button>',this.codeTypescript=`
+  images: Image[]; // init this array with your images
+
+  constructor(private modalGalleryService: ModalGalleryService) {}
+
+  openModal(id: number, imageIndex: number): void {
+    const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
+      id: id,
+      images: this.images,
+      currentImage: this.images[imageIndex],
+      libConfig: {
+        slideConfig: {
+          infinite: true,
+          sidePreviews: {
+            show: false
+          }
+        }
+      } as ModalLibConfig
+    } as ModalGalleryConfig) as ModalGalleryRef;
+  }`;}ngOnInit(){this.metaData();}openModal(o,l){this.modalGalleryService.open({id:o,images:this.images,currentImage:this.images[l],libConfig:{slideConfig:{infinite:true,sidePreviews:{show:false}}}});}metaData(){this.uiService.setMetaData({title:"Demo infinite sliding"});}static{this.\u0275fac=function(l){return new(l||s)};}static{this.\u0275cmp=Uv({type:s,selectors:[["app-infinite-sliding-page"]],decls:125,vars:4,consts:[[1,"container"],[1,"link","clickable"],["href","https://github.com/Ks89/angular-modal-gallery",1,"link-title"],[1,"btn","btn-primary","btn-sm",3,"click"],[3,"content","language"],[1,"table","table-hover","table-sm"],[1,"text-success"]],template:function(l,a){l&1&&(Uo(0,"div",0)(1,"h2",1)(2,"a",2),sI(3,"Infinite sliding enabled"),ec()(),Uo(4,"p"),sI(5,"Modal gallery example with "),Uo(6,"b"),sI(7,"infinite sliding enabled"),ec(),sI(8,", but without side-previews"),ec(),Ff(9,"br"),Uo(10,"h3"),sI(11,"Live Demo"),ec(),Ff(12,"br"),Uo(13,"button",3),qf("click",function(){return a.openModal(318,0)}),sI(14,"Click to open modal gallery id=1 at index=0"),ec(),Ff(15,"br")(16,"br"),Uo(17,"section")(18,"h3"),sI(19,"Code"),ec(),Ff(20,"br"),Uo(21,"h4"),sI(22,"Template"),ec(),Ff(23,"ks-codemirror",4)(24,"br"),Uo(25,"h4"),sI(26,"Typescript"),ec(),Ff(27,"ks-codemirror",4),ec(),Ff(28,"br")(29,"br"),Uo(30,"section")(31,"h3"),sI(32,"Service inputs"),ec(),Ff(33,"br"),Uo(34,"table",5)(35,"thead")(36,"tr")(37,"th"),sI(38,"Input"),ec(),Uo(39,"th"),sI(40,"Value"),ec()()(),Uo(41,"tbody")(42,"tr")(43,"td")(44,"code"),sI(45,"id"),ec()(),Uo(46,"td")(47,"div")(48,"i"),sI(49,"Value: "),ec(),Uo(50,"code"),sI(51,"NUMERIC UNIQUE ID"),ec()(),Uo(52,"div")(53,"b",6),sI(54,"Unique id"),ec()()()(),Uo(55,"tr")(56,"td")(57,"code"),sI(58,"images"),ec()(),Uo(59,"td")(60,"div")(61,"i"),sI(62,"Value: "),ec(),Uo(63,"code"),sI(64,"Image[]"),ec()(),Uo(65,"div")(66,"b",6),sI(67,"Array of "),Uo(68,"code"),sI(69,"Image"),ec(),sI(70," objects"),ec()()()(),Uo(71,"tr")(72,"td")(73,"code"),sI(74,"currentImage"),ec()(),Uo(75,"td")(76,"div")(77,"i"),sI(78,"Value: "),ec(),Uo(79,"code"),sI(80,"Image"),ec()(),Uo(81,"div")(82,"b",6)(83,"code"),sI(84,"Image"),ec(),sI(85," object to show"),ec()()()(),Uo(86,"tr")(87,"td")(88,"code"),sI(89,"libConfig"),ec()(),Uo(90,"td")(91,"div")(92,"i"),sI(93,"Value: "),ec(),Uo(94,"code"),sI(95,"ModalLibConfig"),ec()(),Uo(96,"div")(97,"b",6)(98,"code"),sI(99,"ModalLibConfig"),ec(),sI(100," object to config the library. See below."),ec()()()()()()(),Uo(101,"section")(102,"h4"),sI(103,"ModalLibConfig"),ec(),Ff(104,"br"),Uo(105,"table",5)(106,"thead")(107,"tr")(108,"th"),sI(109,"Input"),ec(),Uo(110,"th"),sI(111,"Value"),ec()()(),Uo(112,"tbody")(113,"tr")(114,"td")(115,"code"),sI(116,"slideConfig"),ec()(),Uo(117,"td")(118,"div")(119,"i"),sI(120,"Value: "),ec(),Uo(121,"code"),sI(122,"{infinite: true, sidePreviews: {show: false }}"),ec()(),Uo(123,"div"),sI(124,"Infinite sliding is enabled and side previews are disabled"),ec()()()()()()()),l&2&&(Gm(23),Lf("content",a.codeHtml)("language",a.configHtml),Gm(4),Lf("content",a.codeTypescript)("language",a.configTs));},dependencies:[vn,Tn],encapsulation:2,changeDetection:1});}};
+export{h as InfiniteSlidingComponent};
