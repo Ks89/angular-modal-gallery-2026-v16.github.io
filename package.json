@@ -9,8 +9,8 @@
   "private": true,
   "repository": "https://github.com/Ks89/angular-modal-gallery-2026-v16.github.io",
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.2.4"
+    "node": ">=24.15.0",
+    "npm": ">=11.0.0"
   },
   "scripts": {
     "ng": "ng",
@@ -50,7 +50,7 @@
     "@ddietr/codemirror-themes": "^1.5.2",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
-    "@ks89/angular-modal-gallery": "^15.0.1",
+    "@ks89/angular-modal-gallery": "^16.0.0",
     "@ks89/ngx-codemirror6": "^4.0.0",
     "bootstrap": "^5.3.8",
     "codemirror": "^6.0.2",
